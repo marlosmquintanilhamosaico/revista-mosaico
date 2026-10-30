@@ -72,6 +72,16 @@
 .visits-stamp{margin-left:auto;align-self:flex-start;border:2px solid var(--coral);color:var(--pink);font-size:.7rem;font-weight:900;letter-spacing:.1em;padding:.5rem;transform:rotate(8deg)}
 @media(max-width:520px){.reader-zone{margin:2rem .1rem 0;padding:1rem;box-shadow:4px 4px 0 var(--yellow)}.comment-form button{width:100%}.visits-demo{gap:.7rem}.visits-demo strong{font-size:1.7rem}.visits-stamp{display:none}}
 \n
+
+.comment-auth{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.comment-auth .demo-note{flex-basis:100%}
+.google-login,.google-logout{font:inherit;font-weight:900;padding:.7rem 1rem;border:2px solid var(--ink);cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.google-login{background:#fff;color:var(--ink)}
+.google-logout{background:var(--ink);color:#fff}
+.comment-form[hidden],.moderation-panel[hidden],.google-login[hidden],.google-logout[hidden]{display:none!important}
+.comment-feedback{min-height:1.5em}
+.moderation-panel{margin-top:2rem;padding:1rem;background:#fff;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--coral)}
+.moderation-panel h3{margin:.2rem 0 .5rem}
 .pending-label,.approved-label{display:inline-block;margin-top:.5rem;padding:.25rem .45rem;font-size:.75rem;font-weight:900;background:#f5c842;color:#202020}
 .approved-label{background:#19a58a;color:#fff}
 .moderation-actions{display:flex;gap:.5rem;margin-top:.7rem;flex-wrap:wrap}
@@ -306,19 +316,29 @@
       <h2 id="reader-title">A conversa continua.</h2>
       <p>Conta pra gente o que você achou desta edição — e que outras descobertas gostaria de ver por aqui.</p>
     </div>
-    <form id="comment-form" class="comment-form">
+    <div class="comment-auth">
+      <p id="auth-status" class="demo-note">Entre com sua conta Google para participar da conversa.</p>
+      <button id="google-login" class="google-login" type="button">Entrar com Google</button>
+      <button id="google-logout" class="google-logout" type="button" hidden>Sair da conta</button>
+    </div>
+    <form id="comment-form" class="comment-form" hidden>
       <label for="comment-name">Seu nome</label>
       <input id="comment-name" name="name" type="text" placeholder="Como podemos chamar você?" required maxlength="60">
       <label for="comment-text">Seu comentário</label>
       <textarea id="comment-text" name="comment" rows="4" placeholder="Compartilhe sua impressão, indicação ou ideia..." required maxlength="600"></textarea>
       <button type="submit">Enviar comentário <span aria-hidden="true">↗</span></button>
-      <p class="demo-note">Prévia visual: nesta versão, os comentários são apenas demonstrações locais. Na versão publicada, todos ficarão pendentes até sua aprovação.</p>
+      <p class="demo-note">Seu comentário ficará pendente e só aparecerá publicamente depois da aprovação editorial.</p>
     </form>
     <div id="comment-feedback" class="comment-feedback" aria-live="polite"></div>
-    <div class="demo-comments" id="demo-comments">
+    <div class="demo-comments" id="approved-comments">
       <h3>Comentários aprovados</h3>
-      <p class="empty-comments">Ainda não há comentários aprovados. As mensagens enviadas ficarão aguardando sua aprovação.</p>
+      <p class="empty-comments">Carregando comentários...</p>
     </div>
+    <section id="moderation-panel" class="moderation-panel" hidden aria-labelledby="moderation-title">
+      <h3 id="moderation-title">Moderação editorial</h3>
+      <p class="demo-note">Área restrita à conta administradora da Revista Mosaico.</p>
+      <div id="pending-comments"><p class="empty-comments">Carregando comentários pendentes...</p></div>
+    </section>
     <div class="visits-demo" id="visits-counter" aria-live="polite">
       <span class="visits-icon" aria-hidden="true">↗</span>
       <div><span class="visits-label">OLHARES POR AQUI</span><strong id="pageview-total">— <small>visualizações</small></strong><p id="pageview-caption">Contador compartilhado da Revista Mosaico.</p><p class="visits-status" id="pageview-status">Contador aguardando configuração para publicação.</p></div>
@@ -327,20 +347,19 @@
   </section>
 </footer>
 <script>
-(function(){const root=document.documentElement;let size=18;document.getElementById('menor').addEventListener('click',()=>{size=Math.max(15,size-1);root.style.fontSize=size+'px'});document.getElementById('maior').addEventListener('click',()=>{size=Math.min(24,size+1);root.style.fontSize=size+'px'});const contrast=document.getElementById('contraste');contrast.addEventListener('click',()=>{const on=document.body.classList.toggle('high-contrast');contrast.setAttribute('aria-pressed',String(on));contrast.textContent=on?'Contraste padrão':'Alto contraste'});document.getElementById('imprimir').addEventListener('click',()=>window.print());document.getElementById('comment-form').addEventListener('submit',function(event){
- event.preventDefault();
- const name=document.getElementById('comment-name').value.trim();
- const comment=document.getElementById('comment-text').value.trim();
- const feedback=document.getElementById('comment-feedback');
- if(!name||!comment){feedback.textContent='Preencha seu nome e comentário para testar.';return;}
- 
- const card=document.createElement('div');card.className='comment-item pending-item';
- const author=document.createElement('strong');author.textContent=name;
- const message=document.createElement('p');message.textContent=comment;
- card.append(author,message);document.getElementById('demo-comments').append(card);
- feedback.textContent='Comentário adicionado à prévia desta página.';
- this.reset();
-});})();
+(function(){
+  const root=document.documentElement;
+  let size=18;
+  document.getElementById('menor').addEventListener('click',()=>{size=Math.max(15,size-1);root.style.fontSize=size+'px'});
+  document.getElementById('maior').addEventListener('click',()=>{size=Math.min(24,size+1);root.style.fontSize=size+'px'});
+  const contrast=document.getElementById('contraste');
+  contrast.addEventListener('click',()=>{
+    const on=document.body.classList.toggle('high-contrast');
+    contrast.setAttribute('aria-pressed',String(on));
+    contrast.textContent=on?'Contraste padrão':'Alto contraste';
+  });
+  document.getElementById('imprimir').addEventListener('click',()=>window.print());
+})();
 </script>
 <!-- CONTADOR REAL: depois de criar o site no GoatCounter, substitua SEU-CODIGO pelo código escolhido no painel. -->
 <script>
@@ -380,13 +399,251 @@
 </script>
 <script data-goatcounter="https://revistamosaico.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-<script src="https://utteranc.es/client.js"
-        repo="marlosmquintanilhamosaico/revista-mosaico"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
+  import {
+    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+  import {
+    getFirestore, collection, addDoc, serverTimestamp, query, where,
+    onSnapshot, updateDoc, doc
+  } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA-MCMlRlgTeL_NoAJ8VTkA-hAJH_fqdRg",
+    authDomain: "revista-mosaico.firebaseapp.com",
+    projectId: "revista-mosaico",
+    storageBucket: "revista-mosaico.firebasestorage.app",
+    messagingSenderId: "361915413825",
+    appId: "1:361915413825:web:8ff5ba55c3152804289dc0"
+  };
+
+  const ADMIN_EMAIL = "marlosmquintanilha@gmail.com";
+  const ARTICLE_ID = "edicao-brasilidades-2026";
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+
+  const loginButton = document.getElementById("google-login");
+  const logoutButton = document.getElementById("google-logout");
+  const authStatus = document.getElementById("auth-status");
+  const form = document.getElementById("comment-form");
+  const nameInput = document.getElementById("comment-name");
+  const textInput = document.getElementById("comment-text");
+  const feedback = document.getElementById("comment-feedback");
+  const approvedBox = document.getElementById("approved-comments");
+  const moderationPanel = document.getElementById("moderation-panel");
+  const pendingBox = document.getElementById("pending-comments");
+
+  let stopApproved = null;
+  let stopPending = null;
+  let currentUser = null;
+
+  function showMessage(target, message) {
+    target.replaceChildren();
+    const p = document.createElement("p");
+    p.className = "empty-comments";
+    p.textContent = message;
+    target.append(p);
+  }
+
+  function commentCard(data, id, pending = false) {
+    const card = document.createElement("article");
+    card.className = "comment-item" + (pending ? " pending-item" : "");
+    const author = document.createElement("strong");
+    author.textContent = data.authorName || "Leitor";
+    const message = document.createElement("p");
+    message.textContent = data.text || "";
+    card.append(author, message);
+
+    if (pending) {
+      const label = document.createElement("span");
+      label.className = "pending-label";
+      label.textContent = "Aguardando aprovação";
+      const actions = document.createElement("div");
+      actions.className = "moderation-actions";
+
+      const approve = document.createElement("button");
+      approve.type = "button";
+      approve.className = "approve-comment";
+      approve.textContent = "Aprovar";
+      approve.addEventListener("click", async () => {
+        approve.disabled = true;
+        try {
+          await updateDoc(doc(db, "comments", id), { status: "approved" });
+        } catch (error) {
+          console.error(error);
+          feedback.textContent = "Não foi possível aprovar. Confira as regras do Firestore.";
+          approve.disabled = false;
+        }
+      });
+
+      const reject = document.createElement("button");
+      reject.type = "button";
+      reject.className = "reject-comment";
+      reject.textContent = "Rejeitar";
+      reject.addEventListener("click", async () => {
+        reject.disabled = true;
+        try {
+          await updateDoc(doc(db, "comments", id), { status: "rejected" });
+        } catch (error) {
+          console.error(error);
+          feedback.textContent = "Não foi possível rejeitar o comentário.";
+          reject.disabled = false;
+        }
+      });
+
+      actions.append(approve, reject);
+      card.append(label, actions);
+    }
+    return card;
+  }
+
+  function startCommentFeeds(isAdmin) {
+    if (stopApproved) stopApproved();
+    if (stopPending) stopPending();
+
+    const approvedQuery = query(
+      collection(db, "comments"),
+      where("status", "==", "approved"),
+      where("articleId", "==", ARTICLE_ID)
+    );
+
+    stopApproved = onSnapshot(approvedQuery, snapshot => {
+      approvedBox.replaceChildren();
+      const heading = document.createElement("h3");
+      heading.textContent = "Comentários aprovados";
+      approvedBox.append(heading);
+      if (snapshot.empty) {
+        const p = document.createElement("p");
+        p.className = "empty-comments";
+        p.textContent = "Ainda não há comentários aprovados. Seja a primeira pessoa a participar.";
+        approvedBox.append(p);
+        return;
+      }
+      snapshot.docs
+        .sort((a, b) => (b.data().createdAt?.seconds || 0) - (a.data().createdAt?.seconds || 0))
+        .forEach(item => approvedBox.append(commentCard(item.data(), item.id)));
+    }, error => {
+      console.error(error);
+      showMessage(approvedBox, "Não foi possível carregar os comentários neste momento.");
+    });
+
+    if (isAdmin) {
+      const pendingQuery = query(
+        collection(db, "comments"),
+        where("status", "==", "pending"),
+        where("articleId", "==", ARTICLE_ID)
+      );
+      stopPending = onSnapshot(pendingQuery, snapshot => {
+        pendingBox.replaceChildren();
+        if (snapshot.empty) {
+          showMessage(pendingBox, "Não há comentários aguardando aprovação.");
+          return;
+        }
+        snapshot.docs
+          .sort((a, b) => (a.data().createdAt?.seconds || 0) - (b.data().createdAt?.seconds || 0))
+          .forEach(item => pendingBox.append(commentCard(item.data(), item.id, true)));
+      }, error => {
+        console.error(error);
+        showMessage(pendingBox, "Não foi possível carregar a fila de moderação.");
+      });
+    } else {
+      pendingBox.replaceChildren();
+    }
+  }
+
+  loginButton.addEventListener("click", async () => {
+    loginButton.disabled = true;
+    feedback.textContent = "";
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = error.code === "auth/popup-closed-by-user"
+        ? "A janela de login foi fechada antes da conclusão."
+        : "Não foi possível entrar com Google. Verifique o domínio autorizado e tente novamente.";
+    } finally {
+      loginButton.disabled = false;
+    }
+  });
+
+  logoutButton.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = "Não foi possível sair da conta.";
+    }
+  });
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!currentUser) {
+      feedback.textContent = "Entre com sua conta Google antes de enviar um comentário.";
+      return;
+    }
+
+    const authorName = nameInput.value.trim().slice(0, 60);
+    const text = textInput.value.trim();
+    if (!authorName || !text) {
+      feedback.textContent = "Preencha seu nome e comentário.";
+      return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    feedback.textContent = "Enviando comentário...";
+    try {
+      await addDoc(collection(db, "comments"), {
+        uid: currentUser.uid,
+        authorName,
+        text,
+        articleId: ARTICLE_ID,
+        status: "pending",
+        createdAt: serverTimestamp()
+      });
+      form.reset();
+      nameInput.value = currentUser.displayName || "";
+      feedback.textContent = "Comentário enviado! Ele ficará visível após a aprovação editorial.";
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = "Não foi possível enviar. Confira as regras publicadas do Firestore e tente novamente.";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+  onAuthStateChanged(auth, user => {
+    currentUser = user;
+    const isAdmin = !!user &&
+      user.emailVerified === true &&
+      (user.email || "").toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
+    loginButton.hidden = !!user;
+    logoutButton.hidden = !user;
+    form.hidden = !user;
+    moderationPanel.hidden = !isAdmin;
+
+    if (user) {
+      authStatus.textContent = isAdmin
+        ? "Conectado como administradora: " + user.email
+        : "Conectado como " + (user.displayName || user.email) + ". Seu comentário será enviado para aprovação.";
+      nameInput.value = user.displayName || "";
+    } else {
+      authStatus.textContent = "Entre com sua conta Google para participar da conversa.";
+      nameInput.value = "";
+    }
+
+    startCommentFeeds(isAdmin);
+  });
+
+  // Comentários aprovados também são carregados para visitantes sem login.
+  startCommentFeeds(false);
 </script>
+
 </body>
 </html>
 
