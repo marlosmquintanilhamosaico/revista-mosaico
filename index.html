@@ -1,137 +1,648 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f5ead7">
-<meta name="description" content="Revista Mosaico Pocket — Quando a Arte Encontra o Poder: uma reflexão sobre as conexões entre cultura, política e sociedade no Brasil.">
-<title>Quando a Arte Encontra o Poder — Revista Mosaico Pocket</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<title>Revista Mosaico — Edição de estreia</title>
+<meta content="Revista Mosaico: Brasilidades — Muitas histórias, um só mosaico. Literatura, cultura, política, cinema, música e indicações." name="description"/>
 <style>
+:root{--coral:#e94738;--blue:#173fc5;--yellow:#f5c842;--pink:#ff6ca8;--green:#19a58a;--lilac:#9274d8;--cream:#f5e9d6;--ink:#202020;--paper:#fffaf1;--line:#d7c9b7;--measure:72ch;font-size:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.7}a{color:#1437a9;text-decoration-thickness:2px;text-underline-offset:3px}a:hover{text-decoration-thickness:3px}:focus-visible{outline:4px solid #111;outline-offset:4px}.skip-link{position:absolute;left:1rem;top:-5rem;background:#fff;color:#111;padding:.75rem 1rem;z-index:10}.skip-link:focus{top:1rem}.masthead{background:var(--ink);color:#fff;padding:1rem clamp(1rem,4vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:-.06em;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1}.brand span{color:var(--yellow)}.masthead small{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:.68rem;margin-top:.4rem;color:#eee}.tools{display:flex;gap:.5rem;flex-wrap:wrap}.tools button{font:inherit;font-size:.8rem;font-weight:700;padding:.45rem .7rem;background:#fff;color:#111;border:2px solid #fff;border-radius:2px;cursor:pointer}.hero{padding:clamp(2.5rem,8vw,7rem) clamp(1.2rem,7vw,7rem);background:var(--coral);color:#fff;position:relative;overflow:hidden}.hero:after{content:"✳";position:absolute;font-size:clamp(8rem,22vw,20rem);right:2%;bottom:-.4em;color:rgba(255,255,255,.16);line-height:1}.hero .label{text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;font-weight:800}.hero h1{font-size:clamp(3rem,8.5vw,7rem);letter-spacing:-.075em;line-height:.93;max-width:900px;margin:.5rem 0 1.25rem}.hero p{max-width:55ch;font-size:clamp(1.1rem,2vw,1.45rem);margin:0}.hero .theme{display:inline-block;margin-top:2rem;background:var(--yellow);color:var(--ink);padding:.45rem .8rem;font-weight:800;transform:rotate(-1deg)}.layout{max-width:1400px;margin:auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:2rem;padding:2rem clamp(1rem,4vw,3rem)}.toc{align-self:start;position:sticky;top:1rem;background:var(--paper);border:2px solid var(--ink);padding:1.1rem;box-shadow:6px 6px 0 var(--ink)}.toc h2{font-size:1rem;margin:0 0 .7rem}.toc ol{padding-left:1.3rem;margin:0}.toc li{margin:.5rem 0}.toc a{font-weight:700}.content{min-width:0}.feature{padding:clamp(1.3rem,4vw,3.5rem);margin:0 0 2rem;background:var(--paper);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);scroll-margin-top:1rem}.feature-coral{border-top:12px solid var(--coral)}.feature-blue{border-top:12px solid var(--blue)}.feature-pink{border-top:12px solid var(--pink)}.feature-yellow{border-top:12px solid var(--yellow)}.feature-green{border-top:12px solid var(--green)}.eyebrow{text-transform:uppercase;font-size:.76rem;font-weight:900;letter-spacing:.13em;margin:0 0 .6rem;color:#444}.feature h2{font-size:clamp(2rem,5vw,4rem);line-height:1.03;letter-spacing:-.055em;margin:.1rem 0 1.4rem;max-width:20ch}.feature h3{font-size:clamp(1.25rem,2.3vw,1.75rem);line-height:1.2;margin:2.3rem 0 .7rem;letter-spacing:-.025em}.feature p{max-width:var(--measure);margin:.9rem 0}.feature .dek{font-size:1.2rem;font-weight:700;line-height:1.5}.byline{font-size:.85rem!important;font-weight:700;color:#555;border-bottom:1px solid var(--line);padding-bottom:1rem}.byline span{color:var(--coral);padding:0 .3rem}.standfirst{font-size:1.2rem;font-weight:700}.editor-note{border-left:5px solid var(--green);padding:.7rem 1rem;background:#e9f6f1}.meta{font-size:.9rem;color:#444}.recommendation{padding:1.1rem 1.25rem;margin:1.3rem 0;background:#fff;border:1px solid var(--line);border-left:7px solid var(--coral)}.recommendation h3{margin-top:.3rem;line-height:1.25;overflow-wrap:anywhere}.recommendation p{overflow-wrap:break-word}.recommendation + .recommendation{margin-top:1.5rem}.bullet{padding-left:1.4rem;position:relative}.bullet:before{content:"•";position:absolute;left:.3rem;font-weight:900}.footer{background:var(--ink);color:#fff;padding:2.5rem clamp(1rem,5vw,4rem);text-align:center}.footer strong{display:block;font-size:clamp(1.5rem,4vw,2.8rem);line-height:1.1}.footer p{margin:.5rem 0}.reading-wide{--measure:88ch}.high-contrast{--cream:#fff;--paper:#fff;--ink:#000;--coral:#b51d12;--blue:#001f8c;--green:#006b53;--pink:#a60045;--line:#555} @media(max-width:850px){.layout{grid-template-columns:1fr}.toc{position:static}.toc ol{columns:2;column-gap:2rem}.hero:after{right:-.2em;bottom:-.6em}}@media(max-width:520px){:root{font-size:16px}.toc ol{columns:1}.feature{box-shadow:4px 4px 0 var(--ink)}.tools{width:100%}.tools button{flex:1}.hero h1{font-size:3.2rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}@media print{.masthead .tools,.toc,.skip-link{display:none!important}.layout{display:block;padding:0}.hero,.feature,.footer{break-inside:avoid;box-shadow:none}.feature{border:0;border-top:2px solid #000}.hero{background:#fff;color:#000;padding:2rem 0}.hero:after{display:none}body{background:#fff;color:#000;font-size:12pt}a{color:#000;text-decoration:underline}}
 
-:root{--paper:#f5ead7;--ink:#171512;--red:#e6382b;--yellow:#f5a900;--blue:#0786a8;--green:#087d69}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,serif;line-height:1.65}
-a{color:inherit}
-button{font:inherit}
-.topbar{background:#171512;color:#fff;padding:12px 5vw;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;font:700 12px/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.topbar a{text-decoration:none;border-bottom:1px solid #f5a900}
-.hero{max-width:1080px;margin:0 auto;padding:28px 20px 0}
-.cover{display:block;width:min(100%,760px);height:auto;margin:0 auto;box-shadow:0 12px 38px #0002}
-.intro{max-width:820px;margin:42px auto 28px;padding:0 22px}
-.kicker{font:700 12px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#a52b20}
-h1{font:900 clamp(36px,7vw,76px)/.95 Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase;margin:12px 0 18px}
-.deck{font-size:clamp(19px,2.6vw,25px);line-height:1.35;max-width:720px}
-.byline{font:12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#62594e}
-.contents{max-width:820px;margin:32px auto 55px;padding:22px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink)}
-.contents h2{font:800 15px Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;margin:0 0 12px}
-.contents ol{margin:0;padding-left:22px;columns:2;column-gap:38px}
-.contents li{padding:4px 0;font-size:16px;break-inside:avoid}
-.contents a{text-decoration-thickness:1px;text-underline-offset:3px}
-.article{max-width:760px;margin:0 auto 76px;padding:0 22px;scroll-margin-top:24px}
-.article .number{font:800 12px Arial,sans-serif;color:#a52b20;letter-spacing:.15em}
-.article h2{font:900 clamp(30px,5vw,48px)/1.02 Arial,sans-serif;letter-spacing:-.035em;margin:8px 0 20px}
-.article .author-signature{margin:-8px 0 22px;font-weight:700;color:#6c6256;letter-spacing:.08em;font-size:11px;text-transform:uppercase}.article h3{font:800 20px/1.2 Arial,sans-serif;margin:30px 0 8px}
-.article p{font-size:18px;margin:0 0 18px}
-.article .lead{font-size:22px;line-height:1.4;font-weight:700}
-.pull{margin:30px 0;padding:18px 22px;border-left:7px solid var(--yellow);font-size:25px;line-height:1.25;font-weight:700}
-.rule{height:8px;width:90px;background:var(--red);margin:26px 0}
-.closing{background:#171512;color:#fff;padding:50px 22px;margin-top:80px}
-.closing-inner{max-width:760px;margin:auto}
-.closing h2{font:900 clamp(30px,5vw,48px)/1 Arial,sans-serif;text-transform:uppercase}
-.closing p{font-size:19px}
-.footer{background:#171512;color:#eee;text-align:center;padding:20px;font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.tools{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:22px auto}
-.tools button{border:1px solid #171512;background:transparent;padding:8px 12px;cursor:pointer;font:700 12px Arial,sans-serif;text-transform:uppercase}
-.tools button:hover{background:#171512;color:#fff}
-@media(max-width:600px){.contents ol{columns:1}.article p{font-size:17px}.topbar{justify-content:center;text-align:center}}
-@media print{.topbar,.tools,.contents{display:none}.article{break-inside:avoid;margin-bottom:30px}.cover{box-shadow:none}}
+.mag-cover{max-width:980px;min-height:700px;margin:2rem auto;background:var(--cream);border:8px solid var(--ink);box-shadow:12px 12px 0 var(--ink);padding:clamp(1rem,3vw,2rem);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.cover-top,.cover-bottom{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;font-weight:900;letter-spacing:.12em;font-size:.78rem;position:relative;z-index:2}
+.cover-top span:first-child{background:var(--coral);padding:.35rem .6rem;color:#fff}
+.cover-wordmark{font-size:clamp(3rem,8vw,6.4rem);font-weight:1000;letter-spacing:-.09em;line-height:.95;position:relative;z-index:2;margin:.5rem 0}
+.cover-wordmark span{color:var(--coral);display:inline-block;margin-left:.12em;transform:rotate(15deg)}
+.cover-art{position:relative;min-height:410px;flex:1;background:var(--coral);overflow:hidden;border:3px solid var(--ink);display:flex;align-items:center;padding:clamp(1rem,4vw,3rem)}
+.cover-shape{position:absolute;border:3px solid var(--ink)}
+.shape-blue{width:45%;height:80%;background:var(--blue);right:4%;top:8%;transform:rotate(8deg);border-radius:48% 48% 5% 5%}
+.shape-yellow{width:34%;height:45%;background:var(--yellow);right:17%;bottom:4%;transform:rotate(-12deg);border-radius:50%}
+.shape-pink{width:25%;height:38%;background:var(--pink);right:2%;top:3%;transform:rotate(18deg);border-radius:50%}
+.shape-green{width:28%;height:30%;background:var(--green);right:34%;top:4%;transform:rotate(-20deg);border-radius:50%}
+.cover-main-title{position:relative;z-index:1;color:#fff;font-size:clamp(4rem,12vw,9rem);font-weight:1000;letter-spacing:-.09em;line-height:.76;text-shadow:5px 5px 0 var(--ink);max-width:75%;overflow-wrap:anywhere}
+.cover-main-title em{font-style:normal;color:var(--yellow)}
+.cover-sticker{position:absolute;z-index:2;right:4%;top:8%;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);padding:.7rem;font-weight:1000;text-align:center;transform:rotate(8deg);font-size:.8rem}
+.cover-subtitle{position:absolute;z-index:2;right:4%;bottom:8%;background:var(--paper);border:3px solid var(--ink);padding:.7rem 1rem;font-weight:900;transform:rotate(-3deg)}
+.cover-bottom{padding-top:1rem;align-items:flex-end}.cover-bottom strong{text-align:right;font-size:1rem;line-height:1.2;letter-spacing:-.03em}
+.masthead{background:var(--ink);border-bottom:8px solid var(--coral);position:relative}
+.brand{display:inline-block;background:var(--yellow);color:var(--ink);padding:.2rem .45rem;box-shadow:5px 5px 0 var(--blue);transform:rotate(-1deg)}
+.brand span{color:var(--coral)}
+.masthead small{color:var(--cream);letter-spacing:.1em}
+@media(max-width:650px){.mag-cover{margin:.6rem;border-width:5px;min-height:570px;box-shadow:5px 5px 0 var(--ink)}.cover-art{min-height:340px}.cover-main-title{font-size:clamp(3.6rem,16vw,6rem);max-width:85%}.cover-sticker{font-size:.65rem;right:2%;top:4%;padding:.45rem}.cover-subtitle{right:2%;bottom:5%;font-size:.85rem}.cover-top,.cover-bottom{font-size:.65rem}.cover-bottom{flex-direction:column;align-items:flex-start}.cover-bottom strong{text-align:left}}
+@media print{.mag-cover{break-after:page;box-shadow:none;margin:0 auto;min-height:95vh}.cover-art{-webkit-print-color-adjust:exact;print-color-adjust:exact}.masthead{break-before:page}}
 
-</style>
+.back-top{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line)}.back-top a{display:inline-block;background:var(--ink);color:#fff;padding:.65rem 1rem;text-decoration:none;font-weight:800;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--yellow)}.back-top a:hover{background:var(--blue)}
+
+.approved-cover{max-width:900px;margin:1.5rem auto 2.5rem;padding:0;background:transparent;border:0;box-shadow:none;min-height:0;display:block;overflow:visible}
+.approved-cover img{display:block;width:100%;height:auto;border:1px solid #d7c9b7;box-shadow:8px 8px 0 #202020}
+.masthead{background:#f5e9d6;color:#202020;border-bottom:5px solid #e94738}
+.brand{display:inline-block;background:transparent;color:#202020;padding:0;box-shadow:none;transform:none;font-family:Georgia,'Times New Roman',serif;font-weight:900;letter-spacing:-.07em}
+.brand span{color:#e94738;text-shadow:5px 0 #f5c842,10px 0 #173fc5}
+.masthead small{color:#202020}
+@media(max-width:650px){.approved-cover{margin:.5rem .5rem 1.5rem}.approved-cover img{box-shadow:4px 4px 0 #202020}}
+@media print{.approved-cover{break-after:page;max-width:100%;margin:0 auto}.approved-cover img{box-shadow:none}}
+\n
+.reader-zone{max-width:780px;margin:3rem auto 0;text-align:left;color:var(--ink);background:var(--cream);border:3px solid var(--ink);padding:clamp(1.2rem,4vw,2.4rem);box-shadow:8px 8px 0 var(--yellow)}
+.reader-heading{border-bottom:2px solid var(--ink);padding-bottom:1.2rem;margin-bottom:1.5rem}
+.reader-kicker{display:inline-block;background:var(--coral);color:white;font-size:.72rem;font-weight:900;letter-spacing:.12em;padding:.4rem .6rem}
+.reader-heading h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1;margin:.8rem 0;letter-spacing:-.05em}
+.reader-heading p{max-width:55ch;margin-bottom:0}
+.comment-form{display:grid;gap:.55rem}
+.comment-form label{font-weight:800;margin-top:.4rem}
+.comment-form input,.comment-form textarea{width:100%;min-width:0;font:inherit;padding:.8rem;border:2px solid var(--ink);border-radius:0;background:#fff;color:#202020}
+.comment-form input:focus,.comment-form textarea:focus{outline:3px solid var(--blue);outline-offset:2px}
+.comment-form button{justify-self:start;margin-top:.5rem;background:var(--blue);color:#fff;border:2px solid var(--ink);padding:.8rem 1.1rem;font:inherit;font-weight:900;cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.comment-form button:hover{background:var(--coral)}
+.demo-note{font-size:.8rem;line-height:1.45;color:#4b453d;margin:.6rem 0 0}
+.comment-feedback{margin-top:1rem;font-weight:800}
+.demo-comments{margin-top:2rem;padding-top:1rem;border-top:2px dashed #a69b8b}
+.demo-comments h3{font-size:1.2rem;margin-bottom:.8rem}
+.empty-comments{color:#665e53;font-style:italic}
+.comment-item{border-left:5px solid var(--pink);background:#fff;color:#202020;padding:.8rem 1rem;margin:.7rem 0;overflow-wrap:anywhere}
+        .comment-item strong{display:block;margin-bottom:.3rem}
+.visits-demo{margin-top:2rem;background:var(--ink);color:var(--cream);padding:1.1rem;display:flex;align-items:center;gap:1rem;position:relative;overflow:hidden}
+.visits-icon{font-size:2.4rem;color:var(--yellow);font-weight:900}
+.visits-label{display:block;color:var(--yellow);font-size:.7rem;letter-spacing:.14em;font-weight:900}
+.visits-demo strong{display:block;font-size:2rem;line-height:1.2}.visits-status{font-size:.7rem!important;color:#f5c842!important;margin-top:.35rem!important}.visits-status a{color:inherit;text-decoration:underline}
+.visits-demo strong small{font-size:1rem}
+.visits-demo p{font-size:.75rem;color:#e5d9c8;margin:.2rem 0 0}
+.visits-stamp{margin-left:auto;align-self:flex-start;border:2px solid var(--coral);color:var(--pink);font-size:.7rem;font-weight:900;letter-spacing:.1em;padding:.5rem;transform:rotate(8deg)}
+@media(max-width:520px){.reader-zone{margin:2rem .1rem 0;padding:1rem;box-shadow:4px 4px 0 var(--yellow)}.comment-form button{width:100%}.visits-demo{gap:.7rem}.visits-demo strong{font-size:1.7rem}.visits-stamp{display:none}}
+\n
+
+.comment-auth{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.comment-auth .demo-note{flex-basis:100%}
+.google-login,.google-logout{font:inherit;font-weight:900;padding:.7rem 1rem;border:2px solid var(--ink);cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
+.google-login{background:#fff;color:var(--ink)}
+.google-logout{background:var(--ink);color:#fff}
+.comment-form[hidden],.moderation-panel[hidden],.google-login[hidden],.google-logout[hidden]{display:none!important}
+.comment-feedback{min-height:1.5em}
+.moderation-panel{margin-top:2rem;padding:1rem;background:#fff;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--coral)}
+.moderation-panel h3{margin:.2rem 0 .5rem}
+.pending-label,.approved-label{display:inline-block;margin-top:.5rem;padding:.25rem .45rem;font-size:.75rem;font-weight:900;background:#f5c842;color:#202020}
+.approved-label{background:#19a58a;color:#fff}
+.moderation-actions{display:flex;gap:.5rem;margin-top:.7rem;flex-wrap:wrap}
+.moderation-actions button{font:inherit;font-size:.85rem;font-weight:800;padding:.45rem .7rem;border:2px solid #202020;cursor:pointer}
+.approve-comment{background:#19a58a;color:#fff}.reject-comment{background:#fff;color:#202020}
+.pending-item{border-left-color:#f5c842}
+\n</style>
+<script data-goatcounter="https://revistamosaico.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
-<body>
-<div class="topbar"><a href="../">← Voltar à edição mensal</a><span>Revista Mosaico · Pocket · Novembro 2026</span></div>
-<header class="hero">
-<img class="cover" src="capa-pocket.png" alt="Capa da Revista Mosaico Pocket: Quando a Arte Encontra o Poder">
-<div class="intro">
-<div class="kicker">Revista Mosaico Pocket · Novembro 2026</div>
-<h1>Quando a arte encontra o poder</h1>
-<p class="deck">Quem influencia quem? Uma reflexão sobre as conexões entre cultura, política e sociedade no Brasil.</p>
-<p class="byline">Uma edição especial conectada à edição mensal Brasilidades</p>
-<div class="tools"><button type="button" onclick="document.body.classList.toggle('leitura-ampliada')">Alternar leitura</button><button type="button" onclick="window.print()">Imprimir / salvar em PDF</button></div>
-</div>
-</header>
-<nav class="contents" aria-label="Sumário"><h2>Nesta edição</h2><ol><li><a href="#artigo-01">Quando a arte encontra o poder</a></li>
-<li><a href="#artigo-02">Quem financia a arte?</a></li>
-<li><a href="#artigo-03">Arte sob pressão</a></li>
-<li><a href="#artigo-04">Obras que transformam</a></li>
-<li><a href="#artigo-05">Quem fica de fora?</a></li></ol></nav>
-<main>
-<section class="article" id="artigo-01"><div class="number">MOSAICO POCKET · 01</div><h2>Quando a arte encontra o poder</h2>
-<p class="byline author-signature">Por Marlos Quintanilha</p><div class="rule"></div>
-<p class="lead">A arte nunca esteve completamente distante do poder. Em diferentes épocas, governos, instituições, empresas e movimentos sociais tentaram aproximá-la de seus projetos — seja para financiar a criação, construir uma identidade coletiva, contestar estruturas ou controlar narrativas.</p>
-<p>No Brasil, essa relação atravessa a história. A cultura foi instrumento de afirmação, espaço de disputa, ferramenta de memória e, muitas vezes, alvo de vigilância. Ao mesmo tempo, artistas encontraram maneiras de transformar experiências individuais em perguntas públicas.</p>
-<p>Falar sobre arte e poder não significa reduzir a criação artística à política partidária. Significa reconhecer que produzir, circular e acessar cultura depende de escolhas: quem recebe recursos, quais espaços são valorizados, que vozes chegam ao público e quais permanecem à margem.</p>
-<blockquote>Quem decide o que merece ser visto, ouvido, preservado e financiado?</blockquote>
-<p>Nesta Pocket, a Revista Mosaico amplia a conversa iniciada na edição mensal. Nosso percurso passa pelo financiamento cultural, pela censura e pela resistência, pelo impacto social das obras e pelos desafios enfrentados por quem cria fora dos grandes circuitos.</p>
+<body id="topo">
+<section aria-label="Capa aprovada da Revista Mosaico" class="mag-cover approved-cover">
+<img alt="Capa da edição de estreia da Revista Mosaico: Brasilidades – Muitas histórias, um só mosaico." src="Revista%20Mosaico_%20Brasilidades%20em%20Foco.png" style="width:100%;height:auto;display:block;">
 </section>
-<section class="article" id="artigo-02"><div class="number">MOSAICO POCKET · 02</div><h2>Quem financia a arte?</h2>
-<p class="byline author-signature">Por Marlos Quintanilha</p><div class="rule"></div>
-<p class="lead">Toda produção cultural precisa de condições para existir. Recursos públicos, leis de incentivo, editais, patrocínios privados, organizações independentes e financiamento direto do público compõem um ecossistema diverso — e desigual.</p>
-<p>No Brasil, mecanismos de incentivo fiscal, como a Lei Rouanet, permitem que projetos culturais aprovados busquem patrocínio de empresas e pessoas físicas, que podem direcionar parte do imposto devido dentro das regras legais. O mecanismo não equivale a um repasse automático para qualquer proposta: há etapas de apresentação, análise, aprovação, captação e prestação de contas.</p>
-<p>Também existem fundos públicos, editais estaduais e municipais, políticas de fomento e iniciativas comunitárias. Cada instrumento tem critérios, limites e objetivos próprios. Em conjunto, eles podem ampliar a produção cultural; quando mal distribuídos ou pouco acessíveis, podem reproduzir desigualdades já existentes.</p>
-<h3>Acesso aos recursos também é uma questão cultural</h3>
-<p>Um projeto sediado em uma grande capital pode ter mais facilidade para encontrar patrocinadores, equipes especializadas e redes institucionais. Já artistas de cidades menores, periferias e regiões com menor infraestrutura cultural frequentemente precisam superar obstáculos adicionais para elaborar propostas, captar recursos e alcançar público.</p>
-<p>O investimento privado pode viabilizar iniciativas importantes, mas também costuma considerar visibilidade, reputação e retorno institucional. Isso levanta uma pergunta legítima: como garantir que a busca por patrocínio não determine, sozinha, quais expressões culturais terão espaço?</p>
-<blockquote>Financiar a cultura é também decidir quais histórias terão condições de chegar até nós.</blockquote>
-<p>Uma política cultural consistente precisa combinar transparência, diversidade regional, continuidade e avaliação pública. Mais do que discutir apenas o volume de recursos, é necessário observar quem consegue acessá-los e que tipo de produção permanece sem apoio.</p>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header class="masthead"><div><div class="brand">REVISTA <span>MOSAICO</span></div><small>Muitos universos. Uma só paixão: a arte.</small></div><div aria-label="Opções de leitura" class="tools"><button aria-label="Diminuir tamanho do texto" id="menor" type="button">A− Texto</button><button aria-label="Aumentar tamanho do texto" id="maior" type="button">A+ Texto</button><button aria-pressed="false" id="contraste" type="button">Alto contraste</button><button id="imprimir" type="button">Imprimir / PDF</button></div></header>
+<section aria-labelledby="titulo-principal" class="hero"><p class="label">Edição de estreia · 01 · 2026</p><h1 id="titulo-principal"><strong>Brasilidades</strong></h1><p>Um país de muitas histórias, memórias, ritmos e maneiras de imaginar o mundo. Uma revista para descobrir, contextualizar, recomendar, questionar e conversar.</p><span class="theme">Muitas histórias, um só mosaico.</span></section>
+<div class="layout"><nav aria-label="Navegação da edição" class="toc"><h2>Nesta edição</h2><ol><li><a href="#abertura"><strong>A arte não cabe em molduras</strong></a></li><li><a href="#brasilidades"><strong>Brasilidades</strong></a></li><li><a href="#literatura">Vozes que escrevem</a></li><li><a href="#cultura-em-cena"><strong>O <strong>Brasil</strong> que chega às telas</strong></a></li><li><a href="#mosaico-indica"><strong>Mosaico Indica</strong></a></li></ol></nav><main class="content" id="conteudo">
+<section class="feature feature-coral" id="abertura"><p class="eyebrow">Manifesto editorial</p><h2><strong>A arte não cabe em molduras</strong></h2>
+<p class="dek">Da Semana de 22 ao presente, a cultura continua encontrando novas formas de existir: e a <strong>Revista Mosaico</strong> nasce para reunir algumas dessas possibilidades.</p>
+<p class="byline">Por Marlos Miranda Quintanilha <span>·</span> Idealizador e diretor editorial</p>
+<p>Quantas histórias deixam de ser descobertas porque olhamos sempre para os mesmos lugares? Quantos artistas permanecem fora do nosso radar porque ainda existem poucas oportunidades para que seus trabalhos encontrem novos públicos? E quantas experiências culturais passam despercebidas quando tentamos encaixar a arte em categorias estreitas demais?</p>
+<p>A cultura é maior do que as molduras que construímos para ela. Está nos livros que nos transformam, nos filmes que nos inquietam, nas canções que atravessam gerações, nos palcos que provocam, nas telas que nos surpreendem e nas manifestações populares que preservam a memória de um povo. Está também na experimentação, no inesperado e na coragem de fazer diferente.</p>
+<p>É desse entendimento que nasce a <strong>Revista Mosaico</strong>.</p>
+<h3>Uma história de ruptura e renovação</h3>
+<p>Em fevereiro de 1922, o Theatro Municipal de <strong>São Paulo</strong> recebeu a <strong>Semana de Arte Moderna</strong>, evento que reuniu artistas e intelectuais interessados em questionar padrões estéticos e abrir novos caminhos para a produção cultural brasileira. A iniciativa tornou-se uma referência importante na história do modernismo no país, embora seus limites e as vozes que ficaram à margem também façam parte de uma leitura crítica de seu legado.</p>
+<p>Mais do que transformar um episódio histórico em uma resposta pronta para os desafios de hoje, vale recuperar uma pergunta que continua pertinente: quem decide o que merece ser visto, ouvido, lido e reconhecido como arte?</p>
+<p>A Semana de 22 não inventou a diversidade cultural brasileira, tampouco representou todas as suas expressões. O <strong>Brasil</strong> já era — e continua sendo — feito de múltiplas tradições, territórios, linguagens e experiências. Ainda assim, o episódio permanece como uma referência para pensar o papel da inquietação artística e a necessidade de questionar modelos estabelecidos.</p>
+<p>Um século depois, a discussão permanece aberta. Novos criadores experimentam linguagens, publicam suas obras de forma independente, ocupam espaços alternativos e encontram comunidades que ampliam as possibilidades de circulação cultural. Ao mesmo tempo, muita coisa interessante ainda depende de oportunidades para chegar a leitores, espectadores e ouvintes.</p>
+<p>É nesse espaço que queremos atuar.</p>
+<h3>Um espaço para muitos universos</h3>
+<p>A <strong>Revista Mosaico</strong> não nasce para determinar o que é bom ou ruim, nem para estabelecer uma única maneira de experimentar a cultura. Também não pretende ser apenas uma vitrine de lançamentos ou uma coleção de elogios.</p>
+<p>Queremos descobrir, contextualizar, recomendar, questionar e conversar.</p>
+<p>A literatura terá espaço ao lado do cinema. A música poderá dialogar com o teatro. Séries, televisão, cultura pop e manifestações artísticas de diferentes origens poderão dividir páginas e despertar conexões inesperadas. Grandes nomes terão lugar quando houver boas histórias a contar, mas artistas independentes e vozes emergentes também merecem nossa atenção.</p>
+<p>Isso significa que divulgar não é necessariamente elogiar. Uma obra pode despertar entusiasmo, provocar dúvidas, dividir opiniões ou revelar contradições. O importante é que o olhar editorial seja honesto, que a crítica tenha fundamento e que o respeito não seja confundido com a obrigação de concordar.</p>
+<p>Queremos uma revista que tenha personalidade, mas não se feche em certezas. Que informe sem perder a leveza, opine sem abrir mão da responsabilidade e recomende sem tratar o leitor como alguém que precisa gostar das mesmas coisas que nós.</p>
+<p>Acima de tudo, queremos criar um lugar de encontro.</p>
+<h3>O <strong>Brasil</strong> cabe em muitas histórias</h3>
+<p>Nossa primeira edição escolhe olhar para as brasilidades. Não para apresentar uma definição definitiva do que significa ser brasileiro, nem para resumir um país inteiro a símbolos conhecidos, paisagens familiares ou tradições isoladas.</p>
+<p>O <strong>Brasil</strong> é plural demais para caber em uma única narrativa.</p>
+<p>Há diferentes sotaques, memórias, ritmos, formas de narrar e maneiras de ocupar o mundo. Há expressões que atravessam gerações e outras que estão surgindo agora. Há artistas que trabalham com referências ancestrais e criadores que reinventam essas referências a partir de experiências contemporâneas.</p>
+<p>Olhar para as brasilidades é reconhecer essa multiplicidade sem transformar a diversidade em decoração. É procurar histórias, compreender contextos e descobrir como a cultura revela tanto aquilo que compartilhamos quanto aquilo que nos torna diferentes.</p>
+<p>Essa escolha temática também apresenta um princípio que desejamos preservar nas próximas edições: a Mosaico não precisa falar de tudo ao mesmo tempo, mas deve estar sempre aberta a novos universos.</p>
+<h3>Por que uma revista chamada Mosaico?</h3>
+<p>Um mosaico é formado por peças que mantêm suas particularidades e, ainda assim, participam de uma composição maior. Cada fragmento tem sua forma, sua cor e sua presença. O conjunto não apaga as diferenças; é justamente delas que nasce o resultado.</p>
+<p>Essa imagem traduz o que desejamos construir.</p>
+<p>A <strong>Revista Mosaico</strong> é um projeto independente, movido pela vontade de criar conversas em torno da cultura e aproximar leitores de obras, artistas e ideias. Queremos que uma matéria desperte curiosidade por outra, que uma recomendação conduza a uma descoberta e que uma opinião diferente amplie uma conversa, em vez de encerrá-la.</p>
+<p>Não prometemos respostas definitivas nem pretendemos falar em nome de todos. Propomos um espaço editorial com identidade, curiosidade e disposição para escutar. Um espaço que reconheça a cultura como experiência, expressão, debate e possibilidade de transformação.</p>
+<p>Esta primeira edição é o começo de um projeto que esperamos construir com os leitores, aprendendo, experimentando e abrindo espaço para novas histórias ao longo do caminho.</p>
+<p>Afinal, uma revista não existe apenas pelas páginas que publica, mas também pelas perguntas que desperta e pelas conversas que consegue iniciar.</p>
+<p>E todo mosaico começa assim: com peças diferentes que, juntas, revelam algo que nenhuma delas mostraria sozinha.</p>
+<p>Bem-vindo à <strong>Revista Mosaico</strong>.</p>
+<p>BRASILIDADES: muitas histórias, um só mosaico. Especial sobre a diversidade cultural brasileira, explorando identidades, territórios, memórias e expressões artísticas.</p>
+<p class="back-top"><a href="#topo">↑ Voltar ao início</a></p>
+</section><section class="feature feature-blue" id="brasilidades"><p class="eyebrow">Especial da edição</p><h2><strong>Brasilidades</strong> — Muitas histórias, um só mosaico</h2>
+<p class="byline">Por Marlos Miranda Quintanilha</p><h3><strong>Quando a política encontra a arte: quem influencia quem?</strong></h3>
+<p>Da literatura ao cinema, da música às artes visuais, a cultura não apenas reflete seu tempo: ela também ajuda a transformá-lo.</p>
+<p>A arte nunca existiu completamente isolada do mundo. Mesmo quando não pretende discutir questões sociais ou políticas, ela nasce em determinado contexto histórico, atravessada pelos valores, conflitos, sonhos e contradições de uma sociedade. Uma canção pode traduzir o sentimento de uma geração, um romance pode revelar desigualdades que muitos preferem ignorar e um filme pode provocar perguntas que permanecem muito depois dos créditos finais. Da mesma forma, decisões políticas podem determinar quais manifestações culturais recebem incentivo, quais espaços permanecem abertos e quais vozes encontram dificuldades para serem ouvidas.</p>
+<p>A relação entre arte e política, portanto, é muito mais profunda do que a presença de partidos, governos ou ideologias em uma obra. Trata-se de uma relação de influência mútua: a política interfere nas condições em que a arte é produzida e divulgada, enquanto a arte participa da maneira como uma sociedade compreende a si mesma e imagina seu futuro.</p>
+<h3>Quando o poder tenta definir a cultura</h3>
+<p>Ao longo da história, governos perceberam que a arte tem um poder particular: ela alcança as pessoas não apenas pela razão, mas também pela emoção. Uma imagem, uma história ou uma melodia pode transmitir ideias com uma intensidade que discursos oficiais nem sempre conseguem reproduzir.</p>
+<p>Por isso, a cultura já foi utilizada tanto para legitimar o poder quanto para contestá-lo. Governantes financiaram monumentos, espetáculos e produções artísticas para construir imagens de prosperidade, unidade nacional ou autoridade. Em outros contextos, regimes autoritários censuraram livros, proibiram músicas, perseguiram artistas e controlaram manifestações culturais consideradas ameaçadoras.</p>
+<p>O <strong>Brasil</strong> também conhece essa história. Durante a ditadura militar, entre 1964 e 1985, músicos, escritores, cineastas, dramaturgos e jornalistas enfrentaram diferentes formas de censura e repressão. Ainda assim, a produção cultural encontrou caminhos para expressar críticas, registrar tensões e preservar espaços de questionamento. Metáforas, ambiguidades, personagens e narrativas indiretas tornaram-se recursos importantes para artistas que precisavam lidar com os limites impostos à liberdade de expressão.</p>
+<p>Essas experiências mostram que a política não influencia a arte apenas pelo conteúdo das obras. Ela também interfere na liberdade de criá-las, publicá-las, apresentá-las e fazê-las chegar ao público.</p>
+<h3>Quando a arte interfere na política</h3>
+<p>Mas essa relação não segue apenas uma direção. A arte também pode modificar o debate público, questionar autoridades, ampliar a visibilidade de grupos historicamente marginalizados e contribuir para mudanças na percepção coletiva.</p>
+<p>Uma peça teatral pode colocar em discussão uma injustiça social. Um documentário pode revelar situações desconhecidas por grande parte da população. Uma música pode se transformar em símbolo de resistência, enquanto uma obra literária pode ajudar leitores a compreender experiências diferentes das suas.</p>
+<p>Isso não significa que toda obra artística precise defender uma causa ou apresentar uma mensagem política explícita. A própria possibilidade de imaginar outros mundos, experimentar novas linguagens e questionar convenções pode desafiar aquilo que uma sociedade considera natural ou imutável.</p>
+<p>A arte também cria espaços de encontro. Pessoas com experiências e opiniões distintas podem assistir ao mesmo filme, ler o mesmo livro ou ouvir a mesma canção e encontrar ali motivos para conversar. Às vezes, a transformação começa justamente quando uma obra não oferece respostas prontas, mas torna impossível continuar ignorando determinada pergunta.</p>
+<h3>A liberdade de criar também é uma questão política</h3>
+<p>Se a política influencia a arte, uma das questões centrais dessa relação é a liberdade artística. Quem decide quais histórias merecem ser contadas? Quem tem recursos para produzir? Quais artistas conseguem ocupar os principais espaços culturais? E quais obras permanecem desconhecidas por falta de financiamento, distribuição ou acesso ao público?</p>
+<p>Essas perguntas vão além da censura direta. Políticas de incentivo, editais, leis de fomento, preservação do patrimônio, funcionamento de bibliotecas e condições de acesso à cultura também moldam o cenário artístico. Quando existem mecanismos transparentes e plurais de apoio, diferentes criadores podem encontrar oportunidades para desenvolver seus trabalhos. Quando esses mecanismos são insuficientes, concentrados ou submetidos a critérios arbitrários, determinadas expressões podem encontrar obstáculos maiores.</p>
+<p>Isso vale especialmente para artistas independentes, produtores de pequenas cidades, editoras de menor porte e criadores que trabalham fora dos circuitos culturais mais conhecidos. A diversidade artística depende não apenas do talento individual, mas também das condições que permitem que esse talento se desenvolva e encontre seu público.</p>
+<p>Ao mesmo tempo, apoiar a cultura não deve significar determinar o que os artistas precisam criar. O incentivo público pode ampliar oportunidades, mas a liberdade artística exige que a criação não seja transformada em instrumento obrigatório de propaganda de governos ou grupos políticos.</p>
+<p>A arte precisa tomar partido?</p>
+<p>Essa é uma das discussões mais recorrentes sobre o papel do artista na sociedade. Há quem defenda que toda produção cultural carrega uma posição política, mesmo quando não a declara. Outros acreditam que a arte deve preservar sua autonomia e não precisa estar a serviço de causas, partidos ou movimentos.</p>
+<p>As duas perspectivas apontam para uma questão importante: a arte pode ter consequências políticas sem ser reduzida à política.</p>
+<p>Uma obra não perde seu valor artístico por abordar conflitos sociais, assim como não se torna menos relevante por tratar de amor, memória, fantasia, humor ou experiências íntimas. O conteúdo político pode estar no centro de uma criação, aparecer de maneira indireta ou simplesmente não ser sua preocupação principal.</p>
+<p>Também é possível reconhecer a importância de uma obra sem concordar com todas as ideias que ela apresenta. Da mesma forma, uma produção alinhada às nossas convicções não está automaticamente livre de problemas estéticos, narrativos ou éticos.</p>
+<p>A crítica cultural tem justamente o papel de examinar essas dimensões, contextualizar escolhas e permitir que diferentes interpretações convivam. Quando a avaliação de uma obra se resume à identidade política de seu criador ou à concordância com determinada mensagem, perdemos a oportunidade de compreender sua complexidade.</p>
+<h3>Cultura como espaço de disputa e diálogo</h3>
+<p>Em uma sociedade plural, a arte pode ser simultaneamente expressão individual, registro histórico, atividade econômica, entretenimento, experimentação e instrumento de contestação. Essas funções não precisam excluir umas às outras.</p>
+<p>A política, por sua vez, não se limita às disputas eleitorais. Ela também está presente nas decisões sobre o uso dos espaços públicos, na distribuição de recursos, no acesso à educação, na preservação da memória e nas oportunidades concedidas a diferentes grupos sociais. Todas essas questões podem influenciar a produção e a circulação cultural.</p>
+<p>Reconhecer essa relação não significa transformar cada livro em manifesto, cada filme em propaganda ou cada canção em declaração partidária. Significa compreender que a cultura participa da vida coletiva e que suas condições de existência também são construídas por escolhas sociais e políticas.</p>
+<p>Talvez a questão mais interessante não seja decidir se a arte deve ou não se envolver com a política, mas garantir que artistas tenham liberdade para escolher como se relacionar com ela. Criar para contestar, para celebrar, para divertir, para preservar uma memória ou simplesmente para experimentar são possibilidades legítimas de expressão.</p>
+<p>A arte não precisa falar a mesma língua da política para influenciá-la. Às vezes, basta revelar uma realidade que estava escondida, dar forma a um sentimento compartilhado ou permitir que alguém enxergue o mundo por outra perspectiva.</p>
+<p>E a política não deveria determinar o que a arte precisa dizer. Seu papel, em uma sociedade comprometida com a liberdade, deve ser garantir condições para que diferentes vozes possam existir, circular e ser debatidas.</p>
+<p>Porque, quando a arte encontra a política, o que está em jogo não é apenas o conteúdo de uma obra. É também quem pode criá-la, quem consegue ouvi-la e que possibilidades uma sociedade está disposta a imaginar para si mesma.</p>
+<p>No fim, a arte pode questionar o poder, inspirar mudanças ou simplesmente nos ajudar a compreender a experiência humana. Sua força está justamente na liberdade de fazer tudo isso sem precisar caber em uma única moldura.</p>
+<p class="back-top"><a href="#topo">↑ Voltar ao início</a></p>
+</section><section class="feature feature-pink" id="literatura"><p class="eyebrow">Literatura</p><h2><strong>Vozes que escrevem o <strong>Brasil</strong> de hoje</strong></h2>
+<p class="byline">Por Marlos Miranda Quintanilha</p>
+<p>Entre histórias que conquistam multidões e obras que ainda buscam novos leitores, a literatura brasileira se constrói na pluralidade de quem escreve.</p>
+<p>Quem escreve o <strong>Brasil</strong> de hoje? A pergunta parece simples, mas não existe uma resposta única. O país que aparece nas páginas dos livros é feito de memórias, conflitos, afetos, desigualdades, mistérios e imaginação. Está nas grandes narrativas que atravessam gerações, nas histórias que conquistam milhares de leitores e também naquelas que, mesmo fora dos circuitos mais conhecidos, encontram caminhos para chegar ao público.</p>
+<p>A literatura brasileira nunca foi uma voz só. Tampouco se limita aos nomes que ocupam as listas de mais vendidos, recebem prêmios ou ganham adaptações para o cinema e a televisão. Seu panorama é formado por escritores de diferentes gerações, origens e experiências, que encontram na palavra maneiras particulares de interpretar a realidade — ou de escapar dela para inventar outros mundos.</p>
+<p>É nesse encontro entre reconhecimento e descoberta que vale olhar para quem está escrevendo agora.</p>
+<p>Um país, muitas formas de contar</p>
+<p>Alguns escritores conseguem transformar experiências particulares em histórias que ultrapassam fronteiras. <strong>Conceição Evaristo</strong>, por exemplo, constrói uma literatura profundamente ligada à memória, à ancestralidade, à identidade e às experiências da população negra brasileira. Sua obra mostra como a narrativa literária pode recuperar vozes historicamente silenciadas e ampliar o modo como compreendemos a sociedade.</p>
+<p>Em outra direção, <strong>Itamar Vieira Junior</strong> investiga as relações entre território, herança, desigualdade e pertencimento. Suas histórias aproximam o leitor de conflitos sociais que atravessam gerações, revelando como a vida individual é marcada por estruturas históricas e pela relação com a terra.</p>
+<p><strong>Milton Hatoum</strong> também faz da memória um território literário. Ao explorar relações familiares, deslocamentos e tensões culturais, sua ficção evidencia a complexidade de experiências brasileiras que não cabem em uma representação uniforme do país.</p>
+<p>Já <strong>Carla Madeira</strong> conquistou um público amplo com narrativas centradas nas relações humanas, nos afetos e nas contradições que atravessam a intimidade. Seus romances demonstram que histórias aparentemente particulares podem provocar identificação justamente por abordarem sentimentos e dilemas reconhecíveis em diferentes experiências de vida.</p>
+<p>Esses autores têm trajetórias distintas, mas ajudam a perceber algo essencial: a literatura não precisa contar a mesma história para falar de um mesmo país. A diversidade de temas, estilos e perspectivas é parte de sua força.</p>
+<p>O mistério também conta histórias sobre nós</p>
+<p>Há quem procure nos livros uma interpretação da realidade, e há quem prefira entrar em uma narrativa sem saber exatamente aonde ela vai levar. O suspense, o romance policial e o terror oferecem esse percurso, mas podem fazer muito mais do que surpreender o leitor.</p>
+<p>Uma investigação criminal pode revelar tensões sociais, relações de poder e contradições morais. O suspense pode explorar segredos familiares, inseguranças e comportamentos extremos. O terror pode transformar medos individuais ou coletivos em imagens capazes de permanecer na memória muito depois da última página.</p>
+<p><strong>Raphael Montes</strong> tornou-se um dos nomes de destaque do suspense e do romance policial brasileiro contemporâneo, explorando personagens moralmente ambíguos e situações que desafiam as expectativas do leitor. Sua trajetória também ajuda a demonstrar que os gêneros populares podem alcançar grande público sem abandonar a experimentação narrativa.</p>
+<p>Mas o interesse por essas histórias não termina nos nomes mais conhecidos.</p>
+<p><strong>Larissa Brasil</strong>, <strong>Iza Artagão</strong> e <strong>Cláudia Lemes</strong> são exemplos de autoras que ajudam a ampliar a conversa sobre a produção brasileira de suspense, thriller e literatura fantástica. Cada trajetória oferece uma oportunidade de discutir como esses gêneros são trabalhados por escritores brasileiros, quais possibilidades criativas apresentam e de que maneira encontram seus leitores.</p>
+<p>Não se trata de afirmar que todos escrevem da mesma forma, nem de reuni-los apenas porque transitam por territórios semelhantes. O que importa é reconhecer que a literatura de gênero também participa da construção do imaginário cultural brasileiro e merece ser discutida com atenção crítica, para além dos rótulos que frequentemente recebe.</p>
+<p>Entre o reconhecimento e a descoberta</p>
+<p>O reconhecimento público é importante, mas não é o único caminho para identificar uma obra relevante. A história literária está repleta de autores que encontraram seus leitores gradualmente, construindo uma trajetória longe dos grandes holofotes. Outros alcançaram públicos expressivos por meio de editoras independentes, coletâneas, clubes de leitura, eventos literários e comunidades dedicadas a determinados gêneros.</p>
+<p>Esses caminhos nem sempre recebem a mesma atenção. A distribuição dos livros, o espaço disponível nas livrarias, a presença na imprensa e as oportunidades de participação em eventos influenciam diretamente a possibilidade de uma obra ser descoberta.</p>
+<p>Nesse cenário, autores como <strong>Debora Gimenes</strong> e <strong>César Costa</strong> também integram esta conversa. Suas trajetórias podem ajudar a explorar as diferentes formas de participação no universo literário e os caminhos percorridos por quem escreve, publica, organiza projetos e busca estabelecer vínculos com leitores.</p>
+<p>O objetivo não é criar uma divisão entre escritores famosos e desconhecidos, como se pertencessem a mundos separados. Tampouco é presumir que a falta de reconhecimento seja, por si só, sinal de qualidade ou de injustiça. Cada obra precisa ser considerada em seus próprios termos.</p>
+<p>A questão é outra: quantas histórias deixamos de conhecer quando olhamos apenas para os nomes que já circulam amplamente?</p>
+<h3>Literatura não é uma competição de visibilidade</h3>
+<p>A presença de autores consagrados e independentes no mesmo panorama não significa que todos tenham trajetórias equivalentes ou que precisem ser avaliados pelos mesmos critérios. Significa reconhecer que a literatura é um campo diverso, no qual convivem diferentes experiências de publicação, alcance, linguagem e relação com o público.</p>
+<p>Um escritor pode conquistar leitores por meio de uma grande editora. Outro pode construir uma comunidade em torno de publicações independentes. Há quem trabalhe com romances extensos, quem prefira narrativas breves, quem investigue questões sociais e quem encontre no fantástico uma maneira de abordar a experiência humana. Nenhum desses caminhos define antecipadamente o valor de uma obra.</p>
+<p>Também é importante lembrar que a literatura não existe apenas para representar o país ou oferecer respostas sobre seus problemas. Ela pode divertir, provocar desconforto, criar mundos impossíveis, investigar sentimentos, produzir estranhamento e proporcionar o prazer de acompanhar uma boa história.</p>
+<p>A diversidade literária depende justamente dessa liberdade. Se todos os livros precisassem cumprir a mesma função, falar dos mesmos assuntos ou alcançar o mesmo público, perderíamos uma parte fundamental do que torna a criação artística interessante.</p>
+<h3>Quem ainda falta descobrir?</h3>
+<p>Talvez uma das melhores perguntas para quem acompanha a literatura não seja apenas quais autores estão em evidência, mas quais vozes ainda não chegaram até nós. Que histórias circulam fora dos grandes centros editoriais? Que escritores estão experimentando novas formas de narrar? Quais gêneros continuam surpreendendo? E que obras merecem ser discutidas para além de seu desempenho comercial?</p>
+<p>Não há uma lista capaz de responder definitivamente a essas perguntas. O panorama literário muda continuamente, e novas obras encontram leitores enquanto outras são redescobertas com o passar do tempo.</p>
+<p>Por isso, olhar para a literatura brasileira de hoje exige curiosidade e disposição para ir além dos caminhos habituais. Os nomes consagrados ajudam a compreender continuidades e transformações; os independentes e emergentes podem revelar experiências, linguagens e perspectivas que ainda não alcançaram grande circulação. O diálogo entre eles amplia nosso repertório e torna a leitura uma experiência menos previsível.</p>
+<p>A literatura brasileira não é uma disputa entre quem já chegou e quem ainda está começando. É um conjunto vivo de histórias, percursos e possibilidades, construído por pessoas que escrevem a partir de diferentes lugares e imaginam diferentes maneiras de contar o mundo.</p>
+<p>Descobrir essas vozes não significa abandonar os autores que já conhecemos. Significa abrir espaço para que novas histórias também façam parte da conversa.</p>
+<p>Afinal, um país tão diverso não poderia caber em uma única narrativa. E uma literatura tão rica não deveria ser conhecida apenas por uma parte de seus nomes.</p>
+<p>Talvez o próximo livro que transforme sua maneira de olhar o mundo ainda esteja esperando para ser descoberto.</p>
+<p class="back-top"><a href="#topo">↑ Voltar ao início</a></p>
+</section><section class="feature feature-yellow" id="cultura-em-cena"><p class="eyebrow">Música · Cinema · TV · Séries · Teatro</p><h2><strong>O <strong>Brasil</strong> que chega às telas</strong></h2>
+<p class="byline">Por Marlos Miranda Quintanilha</p>
+<p>Música, literatura, cinema, séries e teatro: a arte está sempre mudando de palco</p>
+<p>A cultura não fica parada em um único lugar. Uma batida que nasce nas pistas pode chegar a um dos maiores eventos esportivos do mundo. Um livro pode ganhar novos sentidos quando se transforma em filme ou série. E um clássico da dramaturgia pode atravessar séculos até encontrar, no <strong>Brasil</strong>, sotaques, ritmos e cenários inesperados.</p>
+<p>Em <strong>Cultura em cena</strong>, a <strong>Revista Mosaico</strong> acompanha esses encontros entre linguagens, artistas e públicos. Mais do que listar novidades, queremos observar o que elas revelam sobre o momento cultural que vivemos — e por que vale a pena prestar atenção.</p>
+<h3>NO RITMO — O funk brasileiro em um palco global</h3>
+<p>Em setembro, o <strong>Maracanã</strong> recebeu um encontro de música e espetáculo que ultrapassou as quatro linhas do campo. Durante o intervalo do primeiro jogo da temporada regular da <strong>NFL</strong> realizado no <strong>Rio de Janeiro</strong>, em 27 de setembro, <strong>Pedro Sampaio</strong> dividiu o palco com o porto-riquenho <strong>Ricky Martin</strong>.</p>
+<p>A apresentação misturou funk, pop e música latina, reuniu sucessos dos dois artistas e marcou a estreia ao vivo de <strong>Pikito Pikito</strong>, parceria musical da dupla. O evento integrou o espetáculo de uma liga esportiva que vem ampliando sua presença no <strong>Brasil</strong> e escolheu dois nomes de forte apelo popular para conversar com o público. Leia a cobertura do <strong>ge</strong>.</p>
+<p>Mas o que esse encontro representa para a música brasileira?</p>
+<p>O funk é uma expressão cultural construída nas periferias, marcada pela inventividade, pela dança, pela produção independente e pela capacidade de transformar experiências locais em fenômenos de grande alcance. Sua presença em um evento internacional desse porte chama a atenção para a força de uma linguagem musical que há muito deixou de caber em rótulos restritos.</p>
+<p>Isso não significa que a visibilidade internacional apague os preconceitos ou resolva as desigualdades que atravessam a indústria musical. Significa, porém, que artistas brasileiros ocupam espaços cada vez mais diversos e levam consigo ritmos, estéticas e formas de criação que fazem parte da identidade cultural do país.</p>
+<p>Quando o funk encontra o pop latino em um palco como o <strong>Maracanã</strong>, a música também se torna uma conversa sobre circulação cultural: quem chega a esses espaços, quais sons ganham projeção e como uma expressão artística conquista novos públicos sem perder suas raízes.</p>
+<p>DOS LIVROS PARA AS TELAS — Quando uma história ganha outra vida</p>
+<p>Há histórias que parecem não terminar quando a última página é virada. Elas permanecem na memória, provocam discussões e despertam a curiosidade de novos leitores. Algumas, então, atravessam uma fronteira: deixam o papel e passam a existir também no cinema ou no streaming.</p>
+<p>Uma das adaptações brasileiras que merece atenção é <strong>Carolina — <strong>Quarto de Despejo</strong></strong>, inspirada na obra de <strong>Carolina Maria de Jesus</strong>. Com <strong>Maria Gal</strong> no papel da escritora e direção de <strong>Jeferson De</strong>, o longa tem lançamento previsto para 2027, segundo informações divulgadas sobre a produção. A adaptação retoma a trajetória de uma autora fundamental para compreender as relações entre literatura, pobreza, desigualdade e representação social no <strong>Brasil</strong>. Saiba mais sobre o filme.</p>
+<p>A chegada dessa obra às telas abre uma questão importante: como representar visualmente uma escrita tão particular e uma experiência social tão contundente? Adaptar não é simplesmente reproduzir um livro cena por cena. É interpretar, escolher perspectivas e encontrar uma linguagem capaz de dialogar com quem já conhece a obra — e com quem terá o primeiro contato com ela por meio do audiovisual.</p>
+<p>Outra produção que desperta expectativa é <strong>Véspera</strong>, adaptação do romance de <strong>Carla Madeira</strong> para uma série da <strong>HBO Max</strong>. A história, que explora relações familiares, conflitos e as consequências de decisões íntimas, ganha formato seriado e um elenco que inclui <strong>Gabriel Leone</strong>. Até as informações divulgadas em outubro de 2026, a plataforma ainda não havia anunciado uma data de estreia. Confira as informações sobre a adaptação.</p>
+<p>Também está no horizonte a adaptação cinematográfica de <strong>A Cabeça do Santo</strong>, romance de <strong>Socorro Acioli</strong>. A obra, que mistura realismo, imaginação e elementos da cultura popular, será levada ao cinema sob direção de <strong>Joana Mariani</strong>. A proposta desperta interesse justamente pela possibilidade de transportar para a linguagem audiovisual um universo literário tão singular.</p>
+<p>Esses projetos fazem parte de um movimento que merece ser acompanhado de perto. Obras de diferentes gêneros e estilos estão encontrando novos caminhos para chegar ao público. Ao mesmo tempo, cada adaptação traz um desafio: preservar a força da obra original sem deixar de construir uma experiência artística própria.</p>
+<p>Para quem ama literatura, assistir a uma adaptação pode ser uma oportunidade de reencontro. Para quem ainda não leu o livro, pode ser a porta de entrada para um novo universo. E, para todos, fica a possibilidade de comparar escolhas, descobrir diferenças e conversar sobre o que faz uma história continuar viva em outras linguagens.</p>
+<h3>PALCO ABERTO — Um clássico, muitos Brasis</h3>
+<p>A literatura e a dramaturgia também podem encontrar novas formas de expressão no palco. Um exemplo é <strong>Festa no Arraial, O Musical</strong>, espetáculo inspirado livremente em <strong>Sonho de uma Noite de Verão</strong>, de <strong>William Shakespeare</strong>, que transporta a trama para o universo de uma vila brasileira tomada pela atmosfera das festas juninas.</p>
+<p>Com romance, comédia, fantasia, quadrilha e referências à cultura popular, a montagem propõe um encontro entre um clássico da dramaturgia e elementos reconhecíveis da identidade cultural brasileira. A turnê de 2026 passou por diferentes cidades e tem apresentações previstas em <strong>João Pessoa</strong> nos dias 31 de outubro e 1º de novembro. Veja as informações da turnê.</p>
+<p>O interesse de uma releitura como essa está na transformação. Shakespeare continua sendo o ponto de partida, mas o cenário, a música e os códigos culturais aproximam a história de outros públicos. O clássico deixa de ser uma peça distante, preservada apenas pela tradição, e passa a dialogar com uma realidade brasileira.</p>
+<p>É também uma maneira de reconhecer que a cultura não se constrói apenas pela conservação do que veio antes. Ela se renova quando artistas reinterpretam referências, misturam influências e criam novas possibilidades de identificação.</p>
+<p>O teatro nacional é um território especialmente fértil para esses encontros. Em suas diferentes escalas — dos grandes musicais às produções independentes —, o palco pode ser espaço de experimentação, memória, crítica e celebração. Acompanhar essas produções é também olhar para a diversidade de artistas e narrativas que movimentam a cena brasileira.</p>
+<h3>O QUE VEM POR AÍ — Histórias em movimento</h3>
+<p>As próximas estreias reforçam a presença da literatura no audiovisual e mostram a variedade de caminhos que as histórias brasileiras podem percorrer.</p>
+<p>Entre os projetos que merecem acompanhamento estão:</p>
+<p><strong>Quarto de Despejo</strong> — a trajetória de <strong>Carolina Maria de Jesus</strong> chega ao cinema em uma adaptação prevista para 2027.</p>
+<p><strong>Véspera</strong> — o romance de <strong>Carla Madeira</strong> ganha uma série para a <strong>HBO Max</strong>, ainda sem data de estreia anunciada.</p>
+<p><strong>A Cabeça do Santo</strong> — o livro de <strong>Socorro Acioli</strong> será adaptado para o cinema, ampliando o alcance de uma narrativa marcada pela imaginação e pela cultura popular.</p>
+<p>Datas e cronogramas de produções audiovisuais podem mudar. Por isso, acompanhar os anúncios oficiais faz parte da experiência: às vezes, a expectativa por uma obra começa muito antes de as luzes da sala de cinema se apagarem.</p>
+<p>A cultura não cabe em uma única tela</p>
+<p>Música, cinema, literatura e teatro não são universos isolados. Eles se cruzam, emprestam referências, reinventam tradições e encontram novas maneiras de contar histórias. Um show pode ampliar o alcance de um gênero musical; um filme pode despertar o interesse por uma escritora; uma peça pode aproximar um clássico de quem nunca imaginou que ele pudesse falar sua língua.</p>
+<p>É nesse movimento que a cultura permanece viva.</p>
+<p>E é por isso que, na <strong>Revista Mosaico</strong>, queremos olhar para além do lançamento e da manchete. Queremos descobrir o que está sendo criado, reconhecer vozes diferentes, questionar tendências e recomendar experiências que mereçam nossa atenção.</p>
+<p>Porque a arte muda de palco, de formato e de público — mas continua encontrando maneiras de nos provocar, emocionar e fazer pensar.</p>
+<p class="back-top"><a href="#topo">↑ Voltar ao início</a></p>
+</section><section class="feature feature-green" id="mosaico-indica"><p class="eyebrow">Cinco dicas · Cinco universos · Muitas descobertas</p><h2><strong>Mosaico Indica</strong></h2>
+<p class="byline">Por Marlos Miranda Quintanilha</p>
+<p>Nem tudo que merece nossa atenção está no topo das listas. Às vezes, a próxima grande descoberta está em um livro que nos transporta para outro universo, em um filme que permanece na cabeça depois dos créditos, em um disco que traduz sentimentos difíceis de explicar ou em um espetáculo que nos faz olhar para as palavras de outro jeito.</p>
+<p>Nesta primeira seleção, a Mosaico passeia por diferentes linguagens e reúne cinco sugestões para ampliar o repertório, despertar curiosidades e abrir espaço para novas experiências.</p>
+<article class="recommendation">
+<h3>01. PARA LER</h3>
+<p><strong>A Cabeça do Santo</strong>, de <strong>Socorro Acioli</strong></p>
+<p>E se você pudesse ouvir as preces de todas as mulheres que pedem ajuda a Santo Antônio?</p>
+<p>É a partir dessa ideia insólita que <strong>Socorro Acioli</strong> constrói <strong>A Cabeça do Santo</strong>, romance ambientado no sertão cearense. Em busca da família, Samuel chega a uma cidade quase abandonada e encontra abrigo dentro da cabeça oca de uma estátua inacabada do santo. Ali, descobre um dom extraordinário que pode transformar não apenas sua vida, mas também o destino daquele lugar.</p>
+<p>Misturando realismo mágico, humor, religiosidade popular e imaginação, a obra encontra poesia no cotidiano e transforma uma premissa fantástica em uma história sobre pertencimento, amor e comunidade. É uma leitura para quem gosta de narrativas que surpreendem sem perder o contato com a realidade brasileira.</p>
+<p class="editor-note"><strong>Por que indicamos?</strong> Porque a literatura nacional também se alimenta do extraordinário que existe nas nossas tradições, crenças e formas de imaginar o mundo.</p>
+<p class="meta"><strong>Para quem:</strong> leitores que apreciam realismo mágico, cultura popular e histórias fora do convencional.</p>
+</article>
+<article class="recommendation">
+<h3>02. PARA ASSISTIR</h3>
+<p><strong>O Agente Secreto</strong>, de <strong>Kleber Mendonça Filho</strong></p>
+<p>Ambientado no <strong>Recife</strong> de 1977, durante a ditadura militar, o filme acompanha Marcelo, personagem interpretado por <strong>Wagner Moura</strong>, que tenta escapar de um passado difícil enquanto percebe que está sendo observado e ameaçado.</p>
+<p>Mais do que um suspense, <strong>O Agente Secreto</strong> constrói uma atmosfera de vigilância, paranoia e memória. A cidade não funciona apenas como cenário: ela participa da narrativa, carregando marcas históricas e contradições sociais. O resultado é um filme que convida o público a observar tanto o que acontece diante da câmera quanto aquilo que permanece nas entrelinhas.</p>
+<p class="editor-note"><strong>Por que indicamos?</strong> Porque o cinema pode transformar a memória histórica em experiência sensorial, mostrando como o passado continua interferindo no presente. É também uma oportunidade de prestigiar uma produção brasileira que ganhou projeção internacional.</p>
+<p class="meta"><strong>Para quem:</strong> quem gosta de suspense, cinema autoral e histórias que misturam tensão individual e contexto político.</p>
+<p class="meta">Onde procurar: consulte a programação de cinemas e os catálogos de streaming disponíveis na sua região.</p>
+</article>
+<article class="recommendation">
+<h3>03. PARA OUVIR</h3>
+<p><strong>Até Cansar o Cansaço</strong>, de <strong>Juliana Linhares</strong></p>
+<p>O que fazer quando até descansar parece difícil? A cantora e compositora potiguar <strong>Juliana Linhares</strong> transforma essa pergunta em matéria musical neste álbum de 2026, que atravessa a exaustão contemporânea e procura caminhos para imaginar outros futuros.</p>
+<p>Entre MPB, baião, rock e experimentação, o disco trabalha com contrastes: há intensidade, vulnerabilidade, movimento e momentos de introspecção. Em vez de simplesmente descrever o cansaço, a artista procura transformá-lo em impulso criativo, colocando o corpo, os afetos e o desejo de mudança no centro da experiência.</p>
+<p>Faixas como “<strong>Depois do Breu</strong>”, “<strong>Emaranhada</strong>” e a música-título são boas portas de entrada para esse universo sonoro. O álbum também dialoga com diferentes gerações da música brasileira por meio de releituras e participações especiais.</p>
+<p class="editor-note"><strong>Por que indicamos?</strong> Porque é uma obra que conversa com uma sensação coletiva do nosso tempo sem abrir mão da invenção musical. Um convite para escutar com atenção — e talvez dançar um pouco no meio da rotina.</p>
+<p class="meta"><strong>Para quem:</strong> quem procura música brasileira contemporânea que misture experimentação, poesia e reflexão.</p>
+<p class="meta">Onde ouvir: nas plataformas digitais de música.</p>
+</article>
+<article class="recommendation">
+<h3>04. PARA VIVER</h3>
+<p><strong>O Céu da Língua</strong>, com <strong>Gregório Duvivier</strong></p>
+<p>A língua portuguesa está presente em quase tudo o que fazemos, mas raramente paramos para pensar na estranheza e na beleza das palavras que usamos todos os dias.</p>
+<p>Em <strong>O Céu da Língua</strong>, <strong>Gregório Duvivier</strong> transforma essa relação em matéria de um espetáculo que combina poesia, humor e observação do cotidiano. A proposta é brincar com sons, expressões populares e significados, aproximando a literatura de situações familiares e mostrando que a linguagem também pode ser palco de diversão.</p>
+<p>Para quem estiver no <strong>Rio de Janeiro</strong>, há apresentações anunciadas para os dias 28 e 29 de novembro de 2026, na <strong>Brava Arena Jockey</strong>, na <strong>Lagoa</strong>. Antes de sair, vale conferir os horários, a disponibilidade de ingressos e eventuais atualizações da programação.</p>
+<p class="editor-note"><strong>Por que indicamos?</strong> Porque a experiência cultural não precisa ficar restrita à leitura silenciosa ou à tela. Ao vivo, as palavras ganham corpo, ritmo e presença — e podem nos surpreender de um jeito completamente diferente.</p>
+<p class="meta"><strong>Para quem:</strong> quem gosta de literatura, comédia, poesia e espetáculos que convidam a pensar sem perder a leveza.</p>
+</article>
+<article class="recommendation">
+<h3>05. FORA DO RADAR</h3>
+<p><strong>MEC Livros</strong> — uma biblioteca para descobrir sem gastar</p>
+<p>Nem toda descoberta cultural exige ingresso, assinatura ou uma nova compra. A <strong>Biblioteca Digital <strong>MEC Livros</strong></strong>, iniciativa do <strong>Ministério da Educação</strong>, oferece acesso gratuito a um acervo literário digital, com obras em domínio público e títulos contemporâneos disponibilizados para empréstimo.</p>
+<p>Entre as possibilidades estão clássicos da literatura brasileira, como <strong>Dom Casmurro</strong>, de <strong>Machado de Assis</strong>, <strong>Clara dos Anjos</strong>, de <strong>Lima Barreto</strong>, e <strong>O Cortiço</strong>, de <strong>Aluísio Azevedo</strong>. É uma oportunidade de reencontrar livros conhecidos, explorar autores que ficaram para depois ou simplesmente escolher uma leitura por curiosidade.</p>
+<p>O acesso é feito pela internet, com login de uma conta <strong>Gov.br</strong>. As condições de empréstimo e a disponibilidade dos títulos podem variar conforme a obra.</p>
+<p class="editor-note"><strong>Por que indicamos?</strong> Porque democratizar a cultura também significa mostrar onde ela está disponível. E porque uma boa descoberta pode começar com um clique, sem pesar no orçamento.</p>
+<p class="meta"><strong>Para quem:</strong> leitores de todas as idades, estudantes, curiosos e pessoas que desejam criar ou retomar o hábito da leitura.</p>
+<p class="meta"><strong>Acesse:</strong> <a href="https://meclivros.mec.gov.br/">meclivros.mec.gov.br</a></p>
+</article>
+<h3>E você, o que indica?</h3>
+<p>A cultura fica ainda mais interessante quando a descoberta é compartilhada. Um livro emprestado, uma música enviada a um amigo, uma peça comentada depois da sessão ou um filme recomendado na hora certa podem abrir portas para universos inteiros.</p>
+<p>O <strong>Mosaico Indica</strong> nasce com esse espírito: reunir sugestões com personalidade, apresentar diferentes formas de fazer arte e lembrar que sempre há algo novo para descobrir.</p>
+<p>Muitos universos. Uma só paixão: a arte.</p>
+<p class="back-top"><a href="#topo">↑ Voltar ao início</a></p>
 </section>
-<section class="article" id="artigo-03"><div class="number">MOSAICO POCKET · 03</div><h2>Arte sob pressão</h2>
-<p class="byline author-signature">Por Marlos Quintanilha</p><div class="rule"></div>
-<p class="lead">A liberdade artística é testada quando obras, artistas e instituições enfrentam tentativas de silenciamento. A pressão pode assumir a forma de censura oficial, cancelamento de apresentações, intimidação, retirada de financiamento ou autocensura provocada pelo medo de represálias.</p>
-<p>Durante a ditadura militar brasileira (1964–1985), a censura atingiu música, teatro, cinema, imprensa e literatura. Artistas recorreram a metáforas, alegorias e linguagens indiretas para abordar temas que não podiam ser tratados abertamente. A criação tornou-se, em muitos casos, um espaço de resistência e de preservação da crítica.</p>
-<p>Com a redemocratização e a Constituição de 1988, a liberdade de expressão artística passou a contar com garantias constitucionais. Isso não eliminou conflitos. Disputas sobre exposições, espetáculos, livros e conteúdos audiovisuais continuam a mobilizar instituições, grupos sociais, patrocinadores e autoridades.</p>
-<h3>Discordar não é o mesmo que silenciar</h3>
-<p>Obras podem provocar desconforto, questionar valores e expor contradições. O debate público sobre seu conteúdo faz parte de uma sociedade plural. Outra coisa é impedir sua circulação por coerção, ameaça ou abuso de poder. Distinguir crítica, contestação e censura é essencial para que a discussão não se transforme em intimidação.</p>
-<p>O episódio da exposição Queermuseu, encerrada antecipadamente em Porto Alegre em 2017 após forte controvérsia pública, tornou-se um dos casos recentes mais discutidos sobre os limites da liberdade artística, pressão social e responsabilidade das instituições culturais. O caso também mostrou como a circulação de informações nas redes pode acelerar conflitos e produzir consequências concretas.</p>
-<blockquote>Uma sociedade livre não precisa concordar com toda obra. Precisa proteger o direito de criar, expor, questionar e debater.</blockquote>
-<p>A resistência artística não se limita a grandes gestos. Ela também aparece na continuidade de espaços independentes, na preservação de acervos, na circulação de narrativas pouco representadas e na coragem cotidiana de criar.</p>
-</section>
-<section class="article" id="artigo-04"><div class="number">MOSAICO POCKET · 04</div><h2>Obras que transformam</h2>
-<p class="byline author-signature">Por Marlos Quintanilha</p><div class="rule"></div>
-<p class="lead">A arte não muda a sociedade sozinha, nem produz os mesmos efeitos em todas as pessoas. Mas pode deslocar perspectivas, ampliar repertórios, preservar memórias e tornar visíveis experiências que permaneciam fora do debate público.</p>
-<p>Em Quarto de Despejo, Carolina Maria de Jesus transformou a experiência da pobreza e da vida na favela em literatura. Sua escrita rompeu barreiras de representação e colocou no centro uma voz que raramente ocupava o espaço editorial de seu tempo.</p>
-<p>No cinema, filmes como Central do Brasil e Que Horas Ela Volta? construíram retratos distintos das relações sociais brasileiras, aproximando o público de temas como desigualdade, afeto, trabalho, mobilidade e pertencimento. Uma obra não precisa oferecer respostas definitivas para provocar reflexão.</p>
-<p>Na música, artistas de diferentes gerações fizeram da canção um espaço de comentário social, experimentação e identidade. Em contextos de repressão ou transformação política, a música pode registrar tensões de seu tempo e permanecer como memória coletiva.</p>
-<p>Nas artes visuais, a produção de Rosana Paulino questiona apagamentos históricos e as representações da população negra, especialmente das mulheres negras. Seu trabalho demonstra como a pesquisa artística pode revisitar arquivos, confrontar ausências e propor outras formas de olhar para a história.</p>
-<blockquote>Uma obra transforma quando abre uma possibilidade de olhar que antes não estava disponível.</blockquote>
-<p>O alcance da arte depende também de acesso: escolas, bibliotecas, salas de cinema, museus, centros culturais, festivais, plataformas digitais e iniciativas comunitárias. Sem circulação, muitas obras permanecem restritas a públicos já familiarizados com os circuitos culturais.</p>
-</section>
-<section class="article" id="artigo-05"><div class="number">MOSAICO POCKET · 05</div><h2>Quem fica de fora?</h2>
-<p class="byline author-signature">Por Marlos Quintanilha</p><div class="rule"></div>
-<p class="lead">A diversidade cultural brasileira é muito maior do que aquilo que costuma ocupar os grandes palcos, vitrines editoriais, salas de exposição e listas de destaque. Entre criar uma obra e conseguir fazê-la circular existe um caminho marcado por desigualdades.</p>
-<p>Artistas independentes frequentemente acumulam funções: criam, produzem, divulgam, captam recursos, organizam apresentações e cuidam da própria distribuição. A falta de espaços, equipamentos, formação técnica, financiamento contínuo e redes de contato pode limitar a permanência de projetos que já demonstraram valor artístico e comunitário.</p>
-<p>As plataformas digitais abriram novas possibilidades de publicação e encontro com o público. Porém, a visibilidade não é distribuída de maneira neutra. Algoritmos, investimento em divulgação, frequência de publicação e domínio das ferramentas influenciam o alcance. Estar na internet não significa, automaticamente, ser encontrado.</p>
-<h3>Descentralizar é mais do que levar um evento para outro lugar</h3>
-<p>Ampliar o acesso exige reconhecer a produção que já existe nos territórios. Isso envolve escuta, investimento continuado, espaços de criação, formação, circulação e participação dos próprios agentes culturais na definição das políticas. Não basta tratar regiões e comunidades como público: elas também são produtoras de conhecimento, estética e linguagem.</p>
-<p>A pergunta sobre quem fica de fora precisa considerar raça, gênero, classe, deficiência, território, geração e condições econômicas — sem transformar essas experiências em categorias fixas. O desafio é construir oportunidades para que diferentes trajetórias possam criar e circular sem precisar apagar suas singularidades.</p>
-<blockquote>Pluralidade não é apenas diversidade na imagem. É diversidade nas condições de produzir, decidir e ocupar espaços.</blockquote>
-<p>Uma cultura verdadeiramente democrática não se mede apenas pela quantidade de eventos. Mede-se também pela variedade de vozes que conseguem permanecer, experimentar, encontrar público e participar das decisões.</p>
-</section>
-</main>
-<section class="closing"><div class="closing-inner">
-<div class="kicker">Revista Mosaico Pocket · Encerramento</div>
-<h2>Um mosaico não se faz com uma única voz.</h2>
-<p>A relação entre arte e poder não cabe em uma resposta simples. Ela se revela nas escolhas de financiamento, nas disputas por liberdade, nas obras que atravessam gerações e nas vozes que ainda lutam por espaço.</p>
-<p>Talvez a pergunta mais importante não seja apenas quem influencia quem, mas que sociedade estamos construindo quando escolhemos quais expressões culturais apoiar, proteger e fazer circular.</p>
-<p>A arte encontra o poder. E, quando encontra, pode também interrogá-lo.</p>
-<div class="rule"></div>
-<p><strong>Revista Mosaico</strong><br>Muitos universos. Uma só paixão: a arte.</p>
-<p><a href="../">Leia também a edição mensal — Brasilidades: Muitas histórias, um só mosaico.</a></p>
-</div></section>
-<footer class="footer">Revista Mosaico · Cultura · Literatura · Arte · Sociedade · Novembro 2026</footer>
-<style>
-body.leitura-ampliada .article p{font-size:21px}
-body.leitura-ampliada .article .lead{font-size:25px}
-</style>
-</body></html>
+</main></div><footer class="footer">
+  <strong>Muitos universos.<br/>Uma só paixão: a arte.</strong>
+  <p><strong>Revista Mosaico</strong> · Edição de estreia</p>
+  <section class="reader-zone" aria-labelledby="reader-title">
+    <div class="reader-heading">
+      <span class="reader-kicker">A REVISTA É FEITA DE ENCONTROS</span>
+      <h2 id="reader-title">A conversa continua.</h2>
+      <p>Conta pra gente o que você achou desta edição — e que outras descobertas gostaria de ver por aqui.</p>
+    </div>
+    <div class="comment-auth">
+      <p id="auth-status" class="demo-note">Entre com sua conta Google para participar da conversa.</p>
+      <button id="google-login" class="google-login" type="button">Entrar com Google</button>
+      <button id="google-logout" class="google-logout" type="button" hidden>Sair da conta</button>
+    </div>
+    <form id="comment-form" class="comment-form" hidden>
+      <label for="comment-name">Seu nome</label>
+      <input id="comment-name" name="name" type="text" placeholder="Como podemos chamar você?" required maxlength="60">
+      <label for="comment-text">Seu comentário</label>
+      <textarea id="comment-text" name="comment" rows="4" placeholder="Compartilhe sua impressão, indicação ou ideia..." required maxlength="600"></textarea>
+      <button type="submit">Enviar comentário <span aria-hidden="true">↗</span></button>
+      <p class="demo-note">Seu comentário ficará pendente e só aparecerá publicamente depois da aprovação editorial.</p>
+    </form>
+    <div id="comment-feedback" class="comment-feedback" aria-live="polite"></div>
+    <div class="demo-comments" id="approved-comments">
+      <h3>Comentários aprovados</h3>
+      <p class="empty-comments">Carregando comentários...</p>
+    </div>
+    <section id="moderation-panel" class="moderation-panel" hidden aria-labelledby="moderation-title">
+      <h3 id="moderation-title">Moderação editorial</h3>
+      <p class="demo-note">Área restrita à conta administradora da Revista Mosaico.</p>
+      <div id="pending-comments"><p class="empty-comments">Carregando comentários pendentes...</p></div>
+    </section>
+    <div class="visits-demo" id="visits-counter" aria-live="polite">
+      <span class="visits-icon" aria-hidden="true">↗</span>
+      <div><span class="visits-label">OLHARES POR AQUI</span><strong id="pageview-total">— <small>visualizações</small></strong><p id="pageview-caption">Contador compartilhado da Revista Mosaico.</p><p class="visits-status" id="pageview-status">Contador aguardando configuração para publicação.</p></div>
+      <span class="visits-stamp">MOSAICO<br>01</span>
+    </div>
+  </section>
+</footer>
+<script>
+(function(){
+  const root=document.documentElement;
+  let size=18;
+  document.getElementById('menor').addEventListener('click',()=>{size=Math.max(15,size-1);root.style.fontSize=size+'px'});
+  document.getElementById('maior').addEventListener('click',()=>{size=Math.min(24,size+1);root.style.fontSize=size+'px'});
+  const contrast=document.getElementById('contraste');
+  contrast.addEventListener('click',()=>{
+    const on=document.body.classList.toggle('high-contrast');
+    contrast.setAttribute('aria-pressed',String(on));
+    contrast.textContent=on?'Contraste padrão':'Alto contraste';
+  });
+  document.getElementById('imprimir').addEventListener('click',()=>window.print());
+})();
+</script>
+<!-- CONTADOR REAL: depois de criar o site no GoatCounter, substitua SEU-CODIGO pelo código escolhido no painel. -->
+<script>
+(function(){
+  const siteCode = 'SEU-CODIGO'; // Exemplo: revista-mosaico
+  const total = document.getElementById('pageview-total');
+  const status = document.getElementById('pageview-status');
+  const caption = document.getElementById('pageview-caption');
+  if (!siteCode || siteCode === 'SEU-CODIGO') {
+    status.textContent = 'Ative o contador gratuito no GoatCounter e informe o código do site neste arquivo.';
+    caption.textContent = 'O total real aparecerá depois da configuração e publicação.';
+    return;
+  }
+  const endpoint = 'https://' + siteCode + '.goatcounter.com';
+  const tracker = document.createElement('script');
+  tracker.async = true;
+  tracker.src = 'https://gc.zgo.at/count.js';
+  tracker.setAttribute('data-goatcounter', endpoint + '/count');
+  tracker.onload = function(){ status.textContent = 'Contagem ativa'; };
+  tracker.onerror = function(){ status.textContent = 'Não foi possível carregar o contador. Verifique a configuração ou bloqueadores.'; };
+  document.head.appendChild(tracker);
+  fetch(endpoint + '/counter/TOTAL.json', {cache:'no-store'})
+    .then(function(response){ if(!response.ok) throw new Error('Contador indisponível'); return response.json(); })
+    .then(function(data){
+      if (typeof data.count === 'undefined') throw new Error('Total não retornado');
+      total.textContent = '';
+      total.append(document.createTextNode(data.count + ' '));
+      const label = document.createElement('small'); label.textContent = 'visualizações'; total.append(label);
+      caption.textContent = 'Visualizações totais registradas para a revista.';
+      status.textContent = 'Total fornecido pelo GoatCounter; a atualização pode levar alguns minutos.';
+    })
+    .catch(function(){
+      status.textContent = 'O rastreamento foi configurado, mas o total ainda não pôde ser carregado. Confira as permissões do contador.';
+      caption.textContent = 'O total é atualizado pelo serviço de estatísticas.';
+    });
+})();
+</script>
+<script data-goatcounter="https://revistamosaico.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
+  import {
+    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+  import {
+    getFirestore, collection, addDoc, serverTimestamp, query, where,
+    onSnapshot, updateDoc, doc
+  } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA-MCMlRlgTeL_NoAJ8VTkA-hAJH_fqdRg",
+    authDomain: "revista-mosaico.firebaseapp.com",
+    projectId: "revista-mosaico",
+    storageBucket: "revista-mosaico.firebasestorage.app",
+    messagingSenderId: "361915413825",
+    appId: "1:361915413825:web:8ff5ba55c3152804289dc0"
+  };
+
+  const ADMIN_EMAIL = "marlosmquintanilha@gmail.com";
+  const ARTICLE_ID = "edicao-brasilidades-2026";
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+
+  const loginButton = document.getElementById("google-login");
+  const logoutButton = document.getElementById("google-logout");
+  const authStatus = document.getElementById("auth-status");
+  const form = document.getElementById("comment-form");
+  const nameInput = document.getElementById("comment-name");
+  const textInput = document.getElementById("comment-text");
+  const feedback = document.getElementById("comment-feedback");
+  const approvedBox = document.getElementById("approved-comments");
+  const moderationPanel = document.getElementById("moderation-panel");
+  const pendingBox = document.getElementById("pending-comments");
+
+  let stopApproved = null;
+  let stopPending = null;
+  let currentUser = null;
+
+  function showMessage(target, message) {
+    target.replaceChildren();
+    const p = document.createElement("p");
+    p.className = "empty-comments";
+    p.textContent = message;
+    target.append(p);
+  }
+
+  function commentCard(data, id, pending = false) {
+    const card = document.createElement("article");
+    card.className = "comment-item" + (pending ? " pending-item" : "");
+    const author = document.createElement("strong");
+    author.textContent = data.authorName || "Leitor";
+    const message = document.createElement("p");
+    message.textContent = data.text || "";
+    card.append(author, message);
+
+    if (pending) {
+      const label = document.createElement("span");
+      label.className = "pending-label";
+      label.textContent = "Aguardando aprovação";
+      const actions = document.createElement("div");
+      actions.className = "moderation-actions";
+
+      const approve = document.createElement("button");
+      approve.type = "button";
+      approve.className = "approve-comment";
+      approve.textContent = "Aprovar";
+      approve.addEventListener("click", async () => {
+        approve.disabled = true;
+        try {
+          await updateDoc(doc(db, "comments", id), { status: "approved" });
+        } catch (error) {
+          console.error(error);
+          feedback.textContent = "Não foi possível aprovar. Confira as regras do Firestore.";
+          approve.disabled = false;
+        }
+      });
+
+      const reject = document.createElement("button");
+      reject.type = "button";
+      reject.className = "reject-comment";
+      reject.textContent = "Rejeitar";
+      reject.addEventListener("click", async () => {
+        reject.disabled = true;
+        try {
+          await updateDoc(doc(db, "comments", id), { status: "rejected" });
+        } catch (error) {
+          console.error(error);
+          feedback.textContent = "Não foi possível rejeitar o comentário.";
+          reject.disabled = false;
+        }
+      });
+
+      actions.append(approve, reject);
+      card.append(label, actions);
+    }
+    return card;
+  }
+
+  function startCommentFeeds(isAdmin) {
+    if (stopApproved) stopApproved();
+    if (stopPending) stopPending();
+
+    const approvedQuery = query(
+      collection(db, "comments"),
+      where("status", "==", "approved"),
+      where("articleId", "==", ARTICLE_ID)
+    );
+
+    stopApproved = onSnapshot(approvedQuery, snapshot => {
+      approvedBox.replaceChildren();
+      const heading = document.createElement("h3");
+      heading.textContent = "Comentários aprovados";
+      approvedBox.append(heading);
+      if (snapshot.empty) {
+        const p = document.createElement("p");
+        p.className = "empty-comments";
+        p.textContent = "Ainda não há comentários aprovados. Seja a primeira pessoa a participar.";
+        approvedBox.append(p);
+        return;
+      }
+      snapshot.docs
+        .sort((a, b) => (b.data().createdAt?.seconds || 0) - (a.data().createdAt?.seconds || 0))
+        .forEach(item => approvedBox.append(commentCard(item.data(), item.id)));
+    }, error => {
+      console.error(error);
+      showMessage(approvedBox, "Não foi possível carregar os comentários neste momento.");
+    });
+
+    if (isAdmin) {
+      const pendingQuery = query(
+        collection(db, "comments"),
+        where("status", "==", "pending"),
+        where("articleId", "==", ARTICLE_ID)
+      );
+      stopPending = onSnapshot(pendingQuery, snapshot => {
+        pendingBox.replaceChildren();
+        if (snapshot.empty) {
+          showMessage(pendingBox, "Não há comentários aguardando aprovação.");
+          return;
+        }
+        snapshot.docs
+          .sort((a, b) => (a.data().createdAt?.seconds || 0) - (b.data().createdAt?.seconds || 0))
+          .forEach(item => pendingBox.append(commentCard(item.data(), item.id, true)));
+      }, error => {
+        console.error(error);
+        showMessage(pendingBox, "Não foi possível carregar a fila de moderação.");
+      });
+    } else {
+      pendingBox.replaceChildren();
+    }
+  }
+
+  loginButton.addEventListener("click", async () => {
+    loginButton.disabled = true;
+    feedback.textContent = "";
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = error.code === "auth/popup-closed-by-user"
+        ? "A janela de login foi fechada antes da conclusão."
+        : "Não foi possível entrar com Google. Verifique o domínio autorizado e tente novamente.";
+    } finally {
+      loginButton.disabled = false;
+    }
+  });
+
+  logoutButton.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = "Não foi possível sair da conta.";
+    }
+  });
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!currentUser) {
+      feedback.textContent = "Entre com sua conta Google antes de enviar um comentário.";
+      return;
+    }
+
+    const authorName = nameInput.value.trim().slice(0, 60);
+    const text = textInput.value.trim();
+    if (!authorName || !text) {
+      feedback.textContent = "Preencha seu nome e comentário.";
+      return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    feedback.textContent = "Enviando comentário...";
+    try {
+      await addDoc(collection(db, "comments"), {
+        uid: currentUser.uid,
+        authorName,
+        text,
+        articleId: ARTICLE_ID,
+        status: "pending",
+        createdAt: serverTimestamp()
+      });
+      form.reset();
+      nameInput.value = currentUser.displayName || "";
+      feedback.textContent = "Comentário enviado! Ele ficará visível após a aprovação editorial.";
+    } catch (error) {
+      console.error(error);
+      feedback.textContent = "Não foi possível enviar. Confira as regras publicadas do Firestore e tente novamente.";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+  onAuthStateChanged(auth, user => {
+    currentUser = user;
+    const isAdmin = !!user &&
+      user.emailVerified === true &&
+      (user.email || "").toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
+    loginButton.hidden = !!user;
+    logoutButton.hidden = !user;
+    form.hidden = !user;
+    moderationPanel.hidden = !isAdmin;
+
+    if (user) {
+      authStatus.textContent = isAdmin
+        ? "Conectado como administradora: " + user.email
+        : "Conectado como " + (user.displayName || user.email) + ". Seu comentário será enviado para aprovação.";
+      nameInput.value = user.displayName || "";
+    } else {
+      authStatus.textContent = "Entre com sua conta Google para participar da conversa.";
+      nameInput.value = "";
+    }
+
+    startCommentFeeds(isAdmin);
+  });
+
+  // Comentários aprovados também são carregados para visitantes sem login.
+  startCommentFeeds(false);
+</script>
+
+</body>
+</html>
